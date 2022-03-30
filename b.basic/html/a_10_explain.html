@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- a_10_explain.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>웹기초</title>
+  <style>
+    .box_01 {
+      width:200px; height:50px;
+      background-color:#aff;
+    }
+    .box_02 {
+      width:300px; height:30px;
+      background-color:#fca;
+    }
+
+    ul{
+      width: 200px; height:auto;
+      background-color: #ccc;
+    }
+
+    li {width: 200px; height:30px;list-style: none;}
+    .list_01 {background-color: #fea;}
+    .list_02 {background-color: #aaf;}
+
+    hr {width:600px; height:10px;
+      background-color: #fca;}
+    .mini_group {
+      width:300px; height:40px;
+      background-color: #fca;
+    }
+    a {width:300px; height:40px;
+      background-color: #fce;}
+    button {width:300px; height:40px;
+      background-color: #fca;}
+      .convert_box {width:300px; height:40px;
+      background-color: #fca;}
+    .convert_box >a {
+      display:inline-block;
+      width:30%; height:30px;
+      background-color: rgb(176, 126, 93);
+      font-size:smaller;
+    }
+    .convert_box_2 {
+      display:none;
+      width:300px; height:40px;
+      background-color: #fea;
+    }
+  </style>
+</head>
+<body>
+  <h1><a href="../index.html">웹기초</a></h1>
+  <h2>inline과 block의 개념</h2>
+  <div class="box_01">div는 크기를 가질 수 있는가</div>
+  <p class="box_02">p요소는 크기를 가질 수 있는가</p>
+  <ul>
+    <li class="list_01">list_01</li>
+    <li class="list_02">list_02</li>
+  </ul>
+
+  <hr />
+  <span class="mini_group">의미없는 작은단위의 그룹</span>
+  <a href="#">link기능을 가진 요소</a>
+  <hr />
+  <button type="button">버튼은 어떤 형태?</button>
+  <button type="button">버튼은 어떤 형태?</button>
+  <hr />
+  <div> 결과? - block 요소 안에만 inline 담을 수 있다.
+    <span>
+    인라인형식의 요소
+    </span>
+  </div>
+<div>
+  <a href="#">
+    <div>a내부에는 블럭 요소 담을 수 있다</div>
+    <p>설명</p>
+    <dl>
+      <dt>제목</dt>
+      <dd>내용</dd>
+    </dl>
+  </a>
+</div>
+
+<p>
+  <div>p 내부에는 div 상자 담을 수 없다</div>
+</p>
+
+<div class="convert_box">
+  <a href="#">link기능을 가진 요소</a>
+  <a href="#">link기능을 가진 요소</a>
+  <a href="#">link기능을 가진 요소</a></div>
+
+<div class="convert_box_2">
+  안녕하세요 여러분
+</div>
+</body>
+</html>
