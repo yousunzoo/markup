@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    .wrap {width : 900px; height : 1000px; background-color:#EEE; border : 1px solid #eee;}
+    ul {width:100%; height:auto; min-height:90px; background-color:#fff;}
+    li {
+      float : left; width : 100px; height:100px;
+      background-color: #ace; list-style : none;
+      margin : 10px;
+    }
+    ul::after {content : "";
+    display:block;
+    clear:both;}
+  </style>
+</head>
+
+
+<body>
+<div class="wrap">
+  <div class="box">
+    <h1>float 처리 문제점</h1>
+  <ul>
+    <li>float_01</li>
+    <li>float_02</li>
+    <li>float_03</li>
+  </ul>
+</div>
+
+</div>
+
+  
+</body>
+</html>
