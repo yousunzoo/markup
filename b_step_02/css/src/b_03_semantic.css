@@ -1,0 +1,52 @@
+/* b_03_semantic.css */
+
+#wrap {
+  width: 1000px; height: auto;min-height: 500px;
+  margin:auto;
+}
+
+#headBox {
+  width:100%; height: 150px;
+  padding : 10px; box-sizing: border-box;
+  background-color: #ddd;
+}
+
+h1 {float:left; width: 120px; height: 120px; background-color: #fff;}
+
+#navBox {
+
+  float:right; width: 680px; height: 50px;
+  margin-top:70px;
+  background-color: #fff;
+}
+
+#slideBox {
+  width:100%; height: 400px;
+  background-color: #aaa;
+}
+
+#bestBox {
+  width:100%; height: 350px;
+  background-color: #666;
+}
+
+#contentBox {
+  width:100%; height: 200px;
+  background-color: #eee;
+}
+
+#sideBox {
+  position: fixed; left:50%; top:100px; margin-left: 550px;
+  width:200px; height:400px;
+  background-color: #efa;
+}
+
+#footBox {
+  width:100%; height: 500px;
+  background-color: #555;
+}
+
+
+
+
+
