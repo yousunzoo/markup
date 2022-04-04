@@ -1,0 +1,65 @@
+/* b_01_nthChild.css */
+.none {display: none;}
+.code_exam {
+  width: 900px; height: auto; min-height: 1000px;
+  margin: auto; padding:20px; box-sizing: border-box;
+  background-color: #eee;
+}
+
+.code_exam h1 {
+  width:100%; height: auto;
+  padding-bottom:10px;
+  font-size:20px; font-weight: 900;
+  text-align: center;
+}
+
+.code_exam .part {
+  width: 90%; height: auto;
+  margin: auto; margin-top: 20px;
+  padding: 20px; box-sizing: border-box;
+  border : 1px solid #555;
+  background-color: #fff;
+}
+
+.code_exam h2 {
+  width: 100%; height: auto;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #555;
+  font-weight: 700;
+}
+
+.code_exam .n_child,
+.code_exam .n_child_02 {
+  padding:20px; border-radius: 10px;
+  background-color: #fee;
+}
+
+.code_exam .list {
+  list-style : decimal;
+  margin-left:30px;margin-bottom:10px;
+}
+
+/* _____________________________________ */
+
+.n_child li {font-weight:700;}
+.n_child li:first-child {color: #a06;}
+.n_child li:nth-child(1) {text-decoration: underline;}
+.n_child li:nth-child(3) {color: #3c3;}
+.n_child li:last-child {color:#777; text-transform: uppercase;}
+.n_child li:nth-last-child(1) {font-size: 24px;}
+.n_child li:nth-last-child(3) {font-size: 22px;}
+
+.n_child li:nth-child(3n) {list-style-type: disc;}
+.n_child li:nth-child(3n+2) {
+  list-style-type: lower-alpha; font-weight: 100;;}
+
+
+/* ____________________________________ */
+
+.n_child_02 dt:nth-child(1) {font-weight: 700; color:#f00;}
+.n_child_02 dt:nth-child(6) {font-weight: 700; color:#f00;}
+.n_child_02 dd:nth-last-child(3) {font-weight: 700; color:#f00;}
+/* nth-child는 무조건 줄 순서대로 선택을 해야한다.
+dt중 몇번째가 아니라 dl 중 몇번째인지를 보고 판단
+but, dt,dd 문법 틀리면 아예 표시 안됨
+그래서 class 동일하게 지정해놓고 class명으로 사용하는게 편함 */
