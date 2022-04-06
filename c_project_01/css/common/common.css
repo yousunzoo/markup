@@ -1,0 +1,19 @@
+/* common.css */
+
+.clearfix:after,
+.clearfix::after {content: "";display: block; width: 100%; height: 0; clear:both;}
+
+.max_width_01 {width: 95%; min-width: 940px; max-width:1280px; 
+  margin:auto;}
+h1,h2,h3,h4,h5,h6 {margin:0;}
+ul,ol,dl,li,dt,dd {margin: 0; padding:0;}
+ul,ol,li {list-style:none;}
+
+.none {display: none;}
+
+
+.blind {width: 0;height: 0; overflow:hidden;}
+/* .blind {font-size:0;} */
+/* 왜 각 영역에 h2를 달아놓고 안보이게 처리하는가?
+웹 접근성의 법칙에 따라 사용자가 알아볼 수 있도록 처리 */
+
