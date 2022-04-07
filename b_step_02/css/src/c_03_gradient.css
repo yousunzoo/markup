@@ -1,0 +1,79 @@
+/* c_03_gradient.css */
+
+.ex_wrap li {
+  width: 100%; height: 600px;
+  margin-bottom: 10px;
+  padding:20px; padding-top:100px; box-sizing: border-box;
+  border: 1px solid #333;
+  font-size: 50px; font-weight: 700; color:#fff;
+  background-color: #aaa;
+}
+
+.ex_wrap li:last-child {margin-bottom: 0;}
+
+/* ------------------------- */
+
+.linear li:nth-child(1) {
+  background-image: url("../../img/etc/linear_image.png");
+  background-repeat: repeat-x;
+  background-position: 0 -2px;
+  background-size: auto 105%;
+}
+
+/* linear gradient의 경우에는 size를 늘여버리면 미세하게 픽셀이 깨진다.
+이런 경우, repeat-x를 걸어주면 해결된다. */
+
+.linear li:nth-child(2) {
+background-color: #1967FF;
+background-image: linear-gradient(0deg,#FB40FF, #1967FF, #2AA6FF,#3CD0FF);
+}
+
+/* deg 안쓰면 180deg와 똑같이 처리 (위에서부터 아래로) */
+
+.linear li:nth-child(3) {
+  background-color: #1967FF;
+  background-image: linear-gradient(90deg,#FB40FF 30%, #1967FF 50%, #2AA6FF 90%,#3CD0FF);
+  }
+
+  .linear li:nth-child(4) {
+    background-color: #1967FF;
+    background-image: linear-gradient(45deg,#FB40FF 30%, #3f598e 30%, #3f598e 50%,#2AA6FF 50%,#88e3ff);
+    }
+
+    .linear li:nth-child(5) {
+      background-color: #ddd;
+      background-image: linear-gradient(45deg,rgba(255,200,0,0.1) 30%, #3f598e 50%,#2AA6FF,#88e3ff), url("../../img/background/johnson-martin-zpq2DMidOY0-unsplash.jpg");
+      background-repeat: auto, no-repeat;
+      background-position: auto, 50% 50%;
+      }
+
+
+/* ________________________________________ */
+
+.radial li:nth-child(1) {
+  background-image: radial-gradient(#9D02A0,#1967FF,#8BE3FF);
+}
+
+.radial li:nth-child(2) {
+  background-image: radial-gradient(closest-side, #e97aeb 10%,#fff319 50%,#19a0c9 70%);
+}
+
+
+.radial li:nth-child(3) {
+  background-image: radial-gradient(circle, #e97aeb 10%,#fff319 15%,#19a0c9 70%);
+}
+
+.radial li:nth-child(4) {
+  background-image: radial-gradient(circle at 0 50%, #e97aeb 10%,#fff319 15%,#19a0c9 70%);
+}
+
+.radial li:nth-child(5) {
+  background-image: radial-gradient(ellipse at 0 50%, #222416 10%,#fff319 15%,#19a0c9 30%, transparent 50%),
+  radial-gradient(ellipse at 100% 50%, #e97aeb 10%,#fff319 15%,#19a0c9 30%);
+}
+
+/* closest-side : 모든 컬러를 안쪽으로 끌고 들어오는 것
+circle at x y - 원형으로 표현, xy좌표 기준으로 배치
+ellipse - 찌그러지게 표현 */
+/* transparent 사용해서 한 background-image 안에 여러개의 그림 보일 수 있게 설정 가능 */
+/* background-image는 한 요소 안에 여러개의 값을 넣었을 때, 상위의 값부터 표시된다. */
