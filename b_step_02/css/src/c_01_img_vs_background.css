@@ -1,0 +1,141 @@
+/* c_01_img_vs_background.css */
+
+.img_area {
+  float:left;
+  width: 200px; height: 200px;
+  margin-left : 150px;
+  border : 1px solid #777; border-radius: 5px;
+}
+
+.img_01 {
+  overflow: hidden;
+}
+.img_01 img {
+  width: auto; height: auto;
+  min-width: 100%; min-height: 100%;
+  margin-top: -50px;
+}
+
+.img_02 {
+  background-image: url("../../img/card_image/minicard_bg-02.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover
+}
+/* 기본적으로, background 요소는 공간을 남기지 않고 해당 이미지를 반복해서 표현한다. 반복하지 않으려면 no-repeat 사용 */
+/* 꽉 차게 만드는 것 : cover */
+
+.img_02 > span {
+  display: block;
+  width: 0; height: 0; overflow: hidden;
+}
+
+
+.img_03 {
+  background:center no-repeat url("../../img/card_image/minicard_bg-03.png") ;
+  background-size : cover;
+}
+
+/* background 요소 안에 image, repeat, position 한번에 다 들어갈 수 있음. 단, 권장하지는 않음 */
+
+
+/* ___________________________________________ */
+
+.bg_02>li {
+  width: 500px; height: 200px;
+  margin-bottom:100px;
+  border: 1px solid #555; }
+
+.bg_02>li:first-child {
+  background-image: url("../../img/icons/camera.png");
+  background-repeat: repeat-x;
+  /* background-repeat:repeat// no-repeat // repeat-x // repeat-y; */
+}
+
+.bg_02>li:nth-child(2) {
+  background-image: url("../../img/icons/link.png");
+  background-repeat: no-repeat;
+  /* background-position-x: center;
+  background-position-y: center; */
+  background-position: left bottom;
+}
+
+.bg_02>li:nth-child(3) {
+  background-image: url("../../img/icons/link.png");
+  background-repeat: no-repeat;
+  /* background-position-x: center;
+  background-position-y: center; */
+  background-position: 100% 0;
+}
+
+/* background-position에는 x좌표 y좌표 순서대로 둘다 입력해야 한다. 둘 중 하나를 생략하면 그 좌표에 대해서는 자동으로 center 처리 한다. */
+/* background-position 퍼센테이지의 의미 : 부모 요소의 50%의 위치에 위치시키는 동시에, 자식요소의 50% 좌표를 중심으로 위치시킨다. */
+
+
+.bg_02>li:nth-child(4) {
+  height: 250px;
+  background-image: url("../../img/card_image/minicard_bg-04.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  background-size : contain;
+}
+
+/* background-size : 
+cover - 강제로 늘려서 빈 공간이 없게 함
+contain - 지정된 사이즈에 width,height 둘 중 하나가 100%에 도달하게 함 */
+
+
+.bg_02>li:nth-child(5) {
+  height: 300px;
+  background-image: url("../../img/card_image/minicard_bg-05.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  background-size : auto 20px;
+}
+
+/* size에 width, height 둘 다 작성.
+둘 중 하나는 무조건 auto로 쓰는 것을 권장함 */
+
+.bg_02>li:nth-child(6) {
+  background-image: url("../../img/background/jose-duarte-yfQRbv7oYCg-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+
+  background-attachment: fixed;
+
+}
+
+/* background-attachment
+scroll : 이미지를 부모요소에 고정 - 스크롤을 움직여도 그림 변화 없음
+fixed : 이미지를 브라우저 전체를 기준으로 포지션과 사이즈가 조정됨. 스크롤 움직일때마다 해당 위치의 그림 보임  */
+
+.bg_02>li:nth-child(7) {
+  width: 100%;
+  background-image: url("../../img/card_image/minicard_bg-06.png"), url("../../img/card_image/unsplash_F56Y7dgrAkc.png"), url("../../img/icons/marker.svg"); 
+  background-repeat: repeat-y, repeat-y, repeat;
+  background-position: 0 0, 100% 0, 0 50%;
+  background-size: auto 50%, auto 50%, auto 30%;
+}
+
+.bg_02>li:nth-child(8) {
+  background-image: url("../../img/background/laurel-balyeat-ExarETx4xNA-unsplash.jpg");
+  background-repeat: no-repeat; background-position: 50% 50%; background-size: 150%;
+  padding:50px;
+  border : 30px dotted #fa0;
+  font-size: 50px; font-weight: 700; line-height: 2; text-align :center;
+  /* background-clip: border-box; */
+  /* background-clip: padding-box; */
+  /* background-clip: content-box; */
+  background-clip: text;
+  -webkit-background-clip : text;
+  -moz-background-clip: text;
+  color :transparent;
+}
+
+/* -webkit- 아직 공식화되지 않은 기능을 사용할 때 가능 (크롬, 사파리,웨일 등에만 적용) -- 실험작 */
+/* .bg_02 > li:nth-child(8) span {
+  display: block; width: 100%;height: 100%;background-color:rgba(0,200,255,0.1);
+} */
