@@ -1,0 +1,96 @@
+/* c_02_ir_is.css */
+
+.ir {margin-top: 10px;}
+.ir > li {
+  float:left; width:80px; height: 80px; 
+  margin:20px;
+  border : 1px solid #333;
+  background-color: #fff;
+  background-image: url("../../img/color_icons/001-eggplant.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 50% auto;
+}
+
+.ir > li:nth-child(1) {font-size: 0;}
+.ir > li:nth-child(2) {text-indent:-9999px; overflow:hidden;}
+.ir > li:nth-child(3) > span {position:absolute; z-index:-1;}
+.ir > li:nth-child(4) > span {display:block; width: 0;height: 0; overflow: hidden;}
+
+/* .ir > li:nth-child(5) {font-size:0;} */
+.ir > li:nth-child(5) > span {
+  display:block; position : absolute;
+  z-index:-1; width: 0;height: 0;
+  overflow: hidden;}
+  .blind {display:block; position: absolute; z-index:-1; width:0; height:0; overflow: hidden;}
+
+  .ir > li:nth-child(6) {
+    background-image: url("../../img/color_icons/002-celery.png");}
+
+  .ir > li:nth-child(6) > a {display: block;width: 100%;height: 100%;}
+  .ir > li:nth-child(6) > a > span {display:block; width: 0; height: 0; overflow: hidden; position:absolute; z-index: -1;}
+
+  .ir > li:nth-child(7) {
+    background-image: none;
+  }
+  .ir > li:nth-child(7) > a {
+    display: block; width: 100%; height: 100%;
+    background-image: url("../../img/color_icons/003-cauliflower.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 50% auto;
+  }
+  .ir > li:nth-child(7) > a:focus {
+    background-image: url("../../img/color_icons/004-onion.png");
+  }
+  .ir >li:nth-child(7) > a:hover {
+    background-image: url("../../img/color_icons/005-red-cabbage.png");
+  }
+
+
+/* font-size를 0으로 해서 숨기기 가능 */
+/* text-indent : 첫글자를 얼마나 들여쓰기 할 것인지. 마이너스 값 처리 가능
+overflow:hidden - 상자 벗어나는 값 안보이게 할 수 있음 */
+/* position이용하는 기법은 span태그 사용.
+z-index : -1 사용하면 이미지 뒤로 가려져서 보이지 않음.
+span태그는 inline 요소이기 때문에 overflow 사용하려면 block 처리 해야함. */
+/* span태그에 font-size:0 주는 것은 적합하지 않음 */
+/* text-indent도 -9999px도 이제 작은 범주이기에 적합하지는 않음 */
+
+
+/* ________________________________________________ */
+
+.code_exam .is {margin-top: 10px; background-color: #adf;}
+.is li {
+  float:left; width: 100px; height: 100px;
+  border: 1px solid #333; padding:10px; box-sizing: border-box;
+  background-color: #fff;
+}
+.is li a {
+  display: block; width: 64px; height: 64px;
+  background-image: url("../../img/color_icons/icon_sprite.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: auto 64px;
+  background-color: #fda;
+}
+
+
+
+.is a > span {display:block; position:absolute;z-index: -1; width: 0;height: 0;overflow: hidden;}
+
+
+.is li:nth-child(1)>a {background-position-x: -74px;} /*이미지 64px, spacing 10px 만큼 이동 */
+.is li:nth-child(2)>a {background-position-x: -148px;}
+.is li:nth-child(3)>a {background-position-x: -222px;}
+.is li:nth-child(4)>a {background-position-x: calc(-74px * 5);} /* calc기능 사용할 때는 안에 띄어쓰기 철저하게! -- calc는 구형브라우저에서 사용x */
+
+.is li a:hover {background-color: #afc; background-position: calc(-74px * 0);}
+.is li a:focus {background-color: #333; background-position: calc(-74px * 3);}
+
+
+
+
+
+/* 가급적이면 요소는 3개까지만 타고 들어가도록 셋팅 */
+/* position은 x좌표에서는 왼쪽으로 갈수록 -, 오른쪽으로 갈수록 +, y좌표에서는 위쪽으로 갈수록 -, 아랫쪽으로 갈수록 + */
