@@ -22,7 +22,7 @@
   width:100%; /* max-width : 1440px; */
   height:auto;
   padding : 20px 50px 10px; box-sizing: border-box;
-  background-color: #ccc;}
+  background-color: #fff;}
 
 .area_head {
   width:100%; max-width : 1440px;
@@ -33,11 +33,18 @@
   content: ""; display: block; 
   width: 100%; height:0; clear:both;}
 
-  #logo {float:left; width: 120px; height: 70px; background-color: #777;}
-  
+  #logo {float:left; width: 120px; height: 70px;}
+    #logo a {
+      /* display: block; width: 100%;height: 100%; */
+      background-image: url("../../img/header/osam_logo.png");
+      background-image: url("../../img/header/osam_logo.svg"  );
+      /* background-repeat: no-repeat;
+      background-position: 50% 50%; */
+  }
+
   #navBox {
     float:right; 
-    width:510px; height: auto;
+    width:540px; height: auto;
      /* height:70px;  */
     /* background-color: #777; */
   }
@@ -48,12 +55,21 @@
     /* background-color: #fff; */
     margin-bottom: 10px;
   }
+
   .gnb {
     float:right;
-    width: 510px; height: 34px;
+    width:auto; min-width: 510px; height: 34px;
     /* background-color: #ffa; */
   }
 /* float 내부에 float이 들어있으면 clear 처리 할 것 없이 바로 자동으로 높이 적용 */
+
+
+  .unb a {
+    display:block; width: 100%; height: 100%; 
+    word-spacing: -3px;
+    text-transform: capitalize; font-size: 0.75rem; color: #505050;
+    text-align: center;
+    }
 
   .unb ul,
   .gnb ul {width:100%; height: auto; box-sizing: border-box;}
@@ -64,15 +80,27 @@
     width: 50px; height: 20px;
     margin-left : 20px;
     font-size : 10px;
-    background-color: #0cc;
+    /* background-color: #0cc; */
   }
+  .unb li:first-child {float:right;}
+  .unb li:nth-child(2){margin-left:0;}
 
-  .gnb ul {padding: 4px 5px;}
+  .gnb ul {float:right; width: auto; padding: 4px 5px;}
   .gnb li {
     float:left;
-    width: 70px; height: 25px;
-    margin-left: 16px;
-    background-color: #0cc;
+    width: auto; height: 25px;
+    /* margin-left: 14px; */
+    padding:0 7px; border-right:1px solid #aaa;
+    text-align: center;
+  }
+
+  .gnb li:first-child {padding-left:0;}
+  .gnb li:last-child {border : none; padding-right: 0;}
+  .gnb li a {
+    text-align: center; line-height: 25px;
+    padding:5px 10px;
+    font-size: 1rem; color:#171717; text-transform: capitalize;
+    font-weight: 700;
   }
 
 /* .unb li:first-child {margin-left:0;} */
@@ -85,7 +113,7 @@
 #slideBox {
   position:relative;
   width:100%; height:600px;
-  padding-top :100px; box-sizing: border-box;background-color: #aaa;}
+  box-sizing: border-box;background-color: #aaa;}
 
  /* ______________________ */
   .slide_btn {
@@ -96,17 +124,77 @@
 
   .slide_btn button {
     width: 60px; height: 40px; 
-    background-color: #0cc;
+    background-image : url("../../img/main_page/indi_btn.png");
+    background-repeat: no-repeat;
   }
-  .slide_btn .next{float: right;}
-  .slide_btn .prev{float: left;}
 
-  
-  #adCon_01 {
+  .slide_btn button:hover {background-color: #0cc;}
+  .slide_btn button:focus {outline: 2px solid #333;}
+
+  .slide_btn .next{float: right; background-position: -2px -2px;}
+  .slide_btn .prev{float: left; background-position: -76px -2px;}
+
+  /* ------- */
+
+  .slide_area {
+    width: 100%;height: 100%; padding-top: 100px;
+  background-image: url("../../img/main_page/slide_box/slide_01_bg.png");
+  background-repeat: no-repeat; background-position: 50% 50%; background-size: cover;}
+
+  .slide_content {
+    position:relative;
     width : 780px; height:400px; 
     margin:auto;
-    background-color: #ddd;}
+    /* background-color: #ddd; */
+  }
 
+    .slide_content_part {
+    position:absolute; top:0; bottom:0; left:0; margin:auto;
+    width:300px; height: 264px;
+    /* background-color: #fff; */
+  }
+
+    .slide_content_part h3 {
+      width: 100%; height: 60px;
+      margin-bottom: 5px;
+      font-size:2.5rem; font-weight: 700;
+      /* line-height: 60px;  */
+      color:#171717; text-transform: capitalize;
+    }
+    .slide_content_part p {
+      width: 100%; height: 140px;
+      margin-bottom: 5px;
+      font-size: 1.125rem; color: #505050; line-height:150%;
+    }
+    .slide_content_part .link {
+      width: 220px; height: 50px;
+    }
+
+    .link a {
+      display: block; width: 100%;height: 100%;
+      padding : 0px 18px; box-sizing: border-box;
+      line-height:50px;
+      color:#fff;
+      border-radius: 10px;
+      font-size:22px; font-size:1.375rem; font-weight:700; background-color: #1a5d54;
+    }
+
+    .link i {float:right; margin-top: 15px;}
+    .link a:hover {text-decoration:underline;}
+    .link a:focus {outline: 4px solid #ffbd55; }
+
+
+    .slide_img_part {float:right;
+    width: 388px; height: 408px;}
+
+    .slide_img_part > div {
+      width: 100%;height: 100%;
+      background-repeat: no-repeat; background-position: 0 0; background-size:contain;
+    }
+
+    .slide_01 {
+      background-image: url("../../img/main_page/slide_box/slide_01_image.png");
+    }
 
 
 /* newBox------------------------------ */
@@ -117,28 +205,43 @@
 
   .area_title {
     width : 940px; height:70px; 
-    margin : auto; 
-    background-color: #aaa;}
+    margin : auto; padding-top: 15px; box-sizing: border-box;
+    font-size: 2.5rem; font-weight: 700;  
+    /* background-color: #aaa; */
+  }
 
   .area_indicator {
     position : absolute;
     bottom : 70px; left:0; right:0;
     width : 140px; height: 30px ;
-    margin : auto; background-color: #ccc;}
+    margin : auto;
+    /* background-color: #ccc; */
+  }
+
+   .area_indicator ul {width: 100%; height: 100%;}
+    .area_indicator li {
+      float:left; width: 30px; height: 30px;
+      margin-left:25px; background-color: #0cc;
+    }
+    .area_indicator li:first-child {margin-left: 0;}
 
   .area_content {width : 940px ; height:370px ;
     margin : auto;
     margin:48px auto 0;
-    background-color: #ccc;}
+    /* background-color: #ccc; */
+  }
 
   .area_content ul {width: 100%; height:100%;}
   .area_content li {
     float:left; 
     margin-left:20px;
     width: 300px; height: 370px; 
-    background-color: #0cc;}
+    /* background-color: #0cc; */
+  }
  
-
+.area_content li:nth-child(1) a {background-image: url("../../img/main_page/new_product_01.png");}
+.area_content li:nth-child(2) a {background-image: url("../../img/main_page/new_product_02.png");}
+.area_content li:nth-child(3) a {background-image: url("../../img/main_page/new_product_03.png");}
 
 /* subBox------------------------------ */
 #subBox {
