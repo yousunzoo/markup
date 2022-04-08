@@ -1,0 +1,113 @@
+@charset "UTF-8";
+/* @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;700&display=swap'); */
+@import url("../../fonts/caveat_font.css");
+@import url("../../fonts/KOHI.css");
+/* c_04_font.css */
+
+.code_exam .ex_wrap {background-color: transparent;}
+.ex_wrap li {padding: 20px 0; margin-bottom: 10px;}
+
+.ex_wrap li:nth-child(1) {
+  /* font-weight: normal; */
+  /* font-weight: bold; */
+  /* font-weight: bolder; */
+/* font-weight: lighter; */
+font-weight: 700;
+}
+
+/* font-weight 종류 : thin, lighter, normal, bold, boder, black */
+/* font-weight: 100~ 900 */
+/* font-weight: ~ 400 */
+/* font-weight는 designer가 허용한 수치 내에서 조절 가능. 만들어놓은 수치가 없을 땐 비슷한 값으로 자동으로 맞춰짐 */
+
+
+.ex_wrap li:nth-child(2) {
+  /* font-style : normal; */
+  font-style : italic;
+}
+
+/* em,i,address -- 기본적으로 italic체로 적용됨 */
+
+/* .ex_wrap {font-size : 20px;} */
+.ex_wrap li:nth-child(3) {
+  /* font-size: 20pt; */
+  /* font-size: 20px; */
+  font-size : 120%;
+}
+
+/* 16px = 12pt */
+/* %로 설정하면 부모 요소의 값에 따라 상대적으로 처리됨 */
+
+.ex_wrap li:nth-child(4) {
+  height:70px;
+  padding:0;
+  background-color: #fdd;
+
+  line-height: 70px;
+}
+
+.ex_wrap li:nth-child(5) {
+  height:70px;
+  padding:0; padding-top:10px; margin-bottom: 100px;
+  background-color: #dfd;
+
+  line-height: 1.2;
+}
+.ex_wrap li:nth-child(6) {
+  position: relative;
+  height: 200px; background-color: #ddd;
+}
+
+.ex_wrap li:nth-child(6) > span {
+  display: block; position:absolute;
+  height: 0; top : 50%;
+}
+
+.ex_wrap li:nth-child(6) u {
+  display: block;
+  transform : translateY(-50%); line-height: 150%;
+  background-color: #adf;
+}
+
+.ex_wrap li:nth-child(7) {
+  font-family: 'din', 'myriad pro',arial, '돋움','dotum';
+}
+
+.ex_wrap li:nth-child(8) {
+  /* font-family: 'din', 'myriad pro',arial, '돋움','dotum'; */
+  font-family: 'Caveat','KOHIBaeumOTF';
+  color : #950016;
+}
+
+.ex_wrap li:nth-child(9) {
+  letter-spacing: -1px;
+}
+
+.ex_wrap li:nth-child(10) {
+  word-spacing: -3px;
+}
+
+.ex_wrap li:nth-child(11) > a {
+  word-spacing: -4px; text-transform: capitalize;
+}
+/* font-family : 적용할 서체, 없는 경우에 적용할 서체 */
+/* letter-spacing : 글자 하나 사이의 간격. 기본 0 (자평) */
+/* word-spacing : 단어 사이의 간격 */
+/* login의 경우 붙여서 쓰면 스크린리더에서 한단어로 인식하는 경우가 있기 때문에 log in이라고 쓰고 word-spacing 조절하는것 필요 */
+/* text-transform : uppercase // lowercase // capitalize */
+
+.ex_wrap li:nth-child(12) {
+  width: 600px; height: 50px; background-color: #aaefef;
+  text-align: center;
+}
+
+/* text-align : left//right//center//justify(양쪽 정렬) */
+
+.ex_wrap li:nth-child(13) {
+  width: 700px; height: auto; background-color: #acf;
+  text-align: justify;
+  word-break: keep-all;
+}
+
+/* word-break : break-all - 단어가 다 끝나지 않았음에도 불구하고 줄바꿈이 강제적으로 되는 것
+keep-all : 단어가 끝나면 줄바꿈 */
