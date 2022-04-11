@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!-- e_02_form_type_attr.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- explorer 맨 마지막 버전을 사용해라 -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../fonts/fontawesome/css/all.min.css">
+  
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/src/e_02_form_type_attr.css">
+
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <title>e_02_form_type_attr</title>
+</head>
+<body>
+  <!-- layout -->
+<div class="code_exam">
+    <h1><a href="./a_content.html">웹표준</a></h1>
+    <hr>
+    <div class="part">
+      <h2>사용할기능</h2>
+      <div class="ex_wrap">
+        <form action="#" method="POST">
+          <fieldset>
+            <legend>내용을 입력</legend>
+            <div>
+              <label for="usrId" class="usr_id">사용자 ID 입력 : </label>
+              <input type="text" id="usrId" name="usrId" value="" class="input_text" 
+                      placeholder="사용할 ID를 입력하세요." maxlength="5" required />
+            </div>
+            <div>
+            <label for="usrPw">비밀번호 입력 :</label>
+            <input type="password" id="usrPw" name="usrPw" value="" class="input_text"
+                    placeholder="비밀번호를 입력하세요." maxlength="6" required />
+            </div>
+            <hr /> <!--tel/email/url은 일부 구형 브라우저에서 구동 안됨-->
+            <div>
+              <label for="usrTel">전화번호 입력 :</label>
+              <input type="tel" id="usrTel" name="usrTel" value="" class="input_text"
+                      placeholder="전화번호를 입력하세요." maxlength="11" />
+            </div>
+            <div>
+              <label for="usrMail">이메일을 입력 :</label>
+              <input type="email" id="usrMail" name="usrMail" value="" class="input_text"
+                      placeholder="exam@exam.com" required />
+            </div>
+            <div>
+              <label for="usrUrl">url 입력 :</label>
+              <input type="url" id="usrUrl" name="usrUrl" value="" class="input_text"
+                      placeholder="http://naver.com" required />
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>체크 항목 1</legend>
+            <p>가고싶은 여행지를 1가지만 선택하시오.</p>
+            <div>
+              <input type="radio" id="select_01" name="tour" value="제주도" />
+              <label for="select_01">제주도</label>
+            </div>
+            <div>
+              <input type="radio" id="select_02" name="tour" value="괌" checked />
+              <label for="select_02">괌</label>
+            </div>
+            <div>
+              <input type="radio" id="select_03" name="tour" value="로마" />
+              <label for="select_03">로마</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>체크 항목 2</legend>
+            <p>먹고 싶은 음식을 모두 고르시오.</p>
+            <div>
+              <input type="checkbox" id="ck_01" name="food" value="라면" checked />
+              <label for="ck_01">라면</label>
+            </div>
+            <div>
+              <input type="checkbox" id="ck_02" name="food" value="칼국수" />
+              <label for="ck_02">칼국수</label>
+            </div>
+            <div>
+              <input type="checkbox" id="ck_03" name="food" value="된장찌개" checked />
+              <label for="ck_03">된장찌개</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>복합용</legend>
+            <div>
+              <label for="multiText" class="blind">전달할 내용설명</label>
+              <textarea name="multiText" id="multiText" cols="30" rows="5">
+              </textarea>
+            </div>
+
+            <div>
+              <label for="drink">음료수를 고르세요.</label>
+              <select name="drinks" id="drink">
+                <option>선택하세요.</option>
+                <optgroup label="커피류">
+                <option value="espresso">에스프레소</option>
+                <option value="americano">아메리카노</option>
+                <option value="latte">카페라떼</option>
+                <option value="mocha">카페모카</option>
+              </optgroup>
+              <optgroup label="주스류">
+                <option value="orange">오렌지주스</option>
+                <option value="apple">사과주스</option>
+                <option value="banana">바나나주스</option>
+              </optgroup>
+              </select>
+            </div>
+
+            <div>
+              <button type="submit">확인</button>
+              <button type="reset">확인</button>
+              <button type="button">확인</button>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>기타</legend>
+            <div>
+              보이지 않지만 자료를 가지고 보낼 수 있도록 처리하는 기능
+              <input type="hidden" name="hdn" id="hdn" value="..." disabled />
+            </div>
+            <div>
+              <label for="color">사용할 색상 선택</label>
+              <input type="color" name="color" id="color" value="" />
+            </div>
+            <div>
+              <label for="count">갯수선택</label>
+              <input type="number" name="count" id="count" min="0" max="20" step="4" value="1" />
+            </div>
+            <div>
+              <label for="count2">갯수선택</label>
+              <input type="range" name="count2" id="count2" min="0" max="20" step="4" value="1" />
+            </div>
+          </fieldset>
+
+
+          <!-- ==================================== -->
+          <fieldset class="none">
+            <legend>확인용</legend>
+            <input type="submit" value="확인" /> <!-- id, name 사용 x -->
+            <input type="reset" value="취소" />
+            <input type="image" src="../img/icons/camera.png" alt="camera" class="img_btn" /> <!--잘 안 씀-->
+            <input type="button" value="번호 전송" />
+            <input type="file" accept=".jpg, .png, .svg, .pdf" /> <!-- value는 눌렀을 때 사용자가 파일 선택해서 직접 담도록.-->
+          </fieldset>
+        </form>
+
+      </div>
+    </div>
+</div>
+
+  <!-- javascript -->  
+</body>
+</html>
+
+<!-- tel : 스마트폰 상에서 숫자키패드가 나오도록 함 -->
+<!-- required : 유효성 검사, 공백으로 둘 수 없음 -->
+<!-- input : radio 일 때 name이 같으면 여러개의 항목 중 하나의 항목에만 체크 가능 -->
+<!-- input : checkbox 일 때는 name 같아도 여러개 항목 체크 가능 -->
+<!-- input : checked -- 초기에 체크되는 값. 한개의 name에 한개에만 가능. checkbox에는 여러개 가능 -->
+<!-- input은 한 줄로만 사용 가능. 여러 줄로 사용하려면 => textarea -->
+<!-- textarea는 name에 value 값이 포함되어있기 때문에 value 따로 쓰지 않음.
+안에 사용자가 글을 작성해야 하기 때문에 textarea 안에는 내용 넣지 않음! -->
+<!-- textarea cols와 rows의 역할 : css에서 사이즈 지정 안했을 때 기본적으로 보여줄 사이즈 -->
+<!-- button은 기본 타입은 submit. input에 비해서 button은 form 안에 들어가지 않아도 구동됨. 자율성이 높고, 사이즈 변경 가능 -->
+<!-- range는 브라우저마다 모양이 다 다르다. -->
