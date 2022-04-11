@@ -1,0 +1,16 @@
+/* d_02_video.css */
+
+.video_01,
+.video_02 {
+  width: 100%;
+ 
+}
+
+.ex_wrap { background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-image: url("../../img/background/hu-chen-5O6c_pLziXs-unsplash.jpg");
+
+}
+
+/* video는 화면 비율 자동 조정됨 */
