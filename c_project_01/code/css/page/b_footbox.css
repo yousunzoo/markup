@@ -1,0 +1,60 @@
+/* b_footbox.css */
+#footBox {
+  width:100%; height:450px;
+  padding-top:68px; box-sizing:border-box;
+  background-color: #333;}
+
+  .area_foot {height: auto; margin: auto;}
+    .info_logo {
+      width: 120px; height: 70px;
+      margin-bottom: 45px;
+    }
+    .info_logo {
+      background-image: url("../../img/loginpage/osam_sub_logo.png");
+      background-image: url("../../img/loginpage/osam_sub_logo.svg");
+    }
+
+    .info_company {
+      position: relative;
+      height: auto;
+    }
+    .company_content {
+      width: 500px; height: 200px;
+    }
+
+    .company_about {
+      width: 100%;height: 30px; padding:5px 0; box-sizing:border-box; margin-bottom: 20px;
+    }
+
+    .company_about li {float:left; 
+      width: auto; height:30px; padding:0 10px;
+      text-align: center; font-size: 0.75rem; color:#fff;text-transform: capitalize;
+    }
+    .company_address {padding: 10px; margin-bottom: 25px;}
+    .company_address p {font-size: 0.75rem; color: #fff; line-height: 20px;}
+
+    .copyright {font-size: 00.75rem; color:#fff; margin-left:10px;}
+    .social_family {
+      position : absolute; right:0; bottom:0;
+      width: 160px;height: 160px;
+    }
+
+    .family_btn {width: 100%;height: 40px;margin-bottom: 15px; }
+
+    .family_btn ul {width: 100%; height: 40px; }
+    .family_btn li {
+      float:left;
+      width: 40px; height: 40px; margin-right:20px;
+      background-image: url("../../img/footer/sns.png"); 
+      background-repeat: none;
+    }
+
+    .family_btn li:nth-child(1) {background-position: 0 0;}
+    .family_btn li:nth-child(2) {background-position: -60px 0;}
+    .family_btn li:nth-child(3) {background-position: -120px 0;}
+
+    .family_01 {width: 160px;height: 30px;
+    background-color: #fff; border-radius: 5px;margin-bottom: 10px;}
+    .family_01 h3 {margin-left:20px; font-size: 0.75rem; line-height: 30px; text-transform: capitalize;}
+    .family_02 {width: 160px;height: 50px;background-color: #fff;border-radius: 5px;}
+
