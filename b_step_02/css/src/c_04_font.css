@@ -23,8 +23,7 @@ font-weight: 700;
 
 .ex_wrap li:nth-child(2) {
   /* font-style : normal; */
-  font-style : italic;
-}
+  font-style :italic;
 
 /* em,i,address -- 기본적으로 italic체로 적용됨 */
 
