@@ -1,0 +1,65 @@
+/* f_03_transform.css */
+
+.ex_wrap > div {
+  width: 100%;height:auto;
+  min-height:20rem;
+  margin-bottom:10rem;
+  border-bottom:0.0625rem solid #05a;
+  background-color: #fff;
+}
+
+/* translate */
+.tr {width: 6.25rem; height: 6.25rem;
+  margin:auto; margin-bottom:5rem;
+  color:#fff; border-radius: 0.3rem;
+  background-color: #0af;}
+
+.tr_01:hover {transform: translateX(200px);}
+.tr_02:hover {transform: translateY(-100px);}
+.tr_03:hover {transform: translate(-100px, 50px);}
+
+/* scale */
+.sc {float:left; width:6.25rem; height: 6.25rem;
+  margin:1rem 5rem;
+  background-color: #acf;}
+
+.sc_01:hover {transform: scale(50%);}
+.sc_02:hover {transform: scale(0.5);}
+.sc_03:hover {transform: scale(1.3);}
+.sc_04:hover {transform: scale(1.3, 1.5);}
+
+/* rotate 각도:deg. 기본적으로 z축(중심) 기준으로 회전 */
+.ro {
+  float:left;
+  width:6.25rem; height: 6.25rem; margin:3rem;
+  color:#fff; background-color: #c59;
+}
+
+.ro_01:hover {transform: rotate(45deg);}
+.ro_02:hover {transform: rotate(180deg);}
+.ro_03:hover {transform: rotateX(45deg);}
+.ro_04:hover {transform: rotateY(310deg);}
+.ro_05:hover {transform: rotate(45deg);transition : all 300ms linear;}
+.ro_05 > span {display:block; width: 100%; height: 100%; background-color: rgba(20,20,20,0.5);}
+
+.ro_05:hover > span {transform: rotate(-45deg); }
+
+  
+/* inline 요소는 transform 적용이 되지 않음 */
+
+/* skew : deg */
+.sk {
+  width: 7rem; height: 7rem;
+  margin:2rem;
+  background-image: linear-gradient(#acf, #fca);}
+
+.sk_01 {transform: skewX(-45deg); transform-origin: 0 100% ;}
+.sk_02 {transform: skewY(-15deg); transform-origin: 0 100% ;}
+.sk_03 {transform: skew(15deg, 60deg);}
+
+/* 복합 기능 */
+.mul {float:left;width: 8rem;height: 8rem;margin: 10rem; background-color: #acf;}
+
+.multi_01:hover {transform: scale(2) translate(50px);}
+.multi_02 {transform: scale(2) rotate(45deg);}
+.multi_02:hover {transform: scale(1) rotate(0);}
