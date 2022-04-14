@@ -6,11 +6,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../fonts/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../fonts/fontawesome5/css/all.min.css">
     
     <link rel="stylesheet" href="../css/common/reset.css">
     <link rel="stylesheet" href="../css/common/common.css">    
-    <link rel="stylesheet" href="../css/src/main_02.css">
+    <link rel="stylesheet" href="../css/src/main_03.css">
     <title>웹기초</title>
   </head>
   <body>
@@ -108,12 +108,16 @@
         <div class="max_width_01 area">
           <div class="sub_area">
             <h2>보조 광고영역</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi est ipsum at </p>
-            <div class="sub_area_btn"></div>
+            <p>Lorem ipsum dolor sit amet. 
+               ipsum dolor sit amet consectetur adipisicing elit. Modi est ipsum at </p>
+            <div class="sub_area_btn">
+              <a href="#">바로가기</a>
+              <a href="#">바로가기</a>              
+            </div>
           </div>
           
           <div class="sub_area_img">
-            이미지 영역
+            <span class="blind">이미지 영역</span>
           </div>
         </div>
       </section><!-- // #subBox -->
@@ -134,7 +138,7 @@
                 </button>
               </div>
               <div class="more_btn">
-                <a>+더보기</a>
+                <a href="#">더보기</a>
               </div>
             </div>
             
@@ -142,47 +146,64 @@
               <ul>
                 <li>
                   <a href="#">
-                    <div class="card_img">
-                      <!-- 카드 이미지 -->
-                    </div>
+                    <div class="card_img"> <!-- 카드이미지 --> </div>
                     <dl>
-                      <dt class="card_sub_title">God Father</dt>
+                      <dt class="card_sub_title">God father</dt>
                       <dd class="card_narr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium nihil </dd>
                       <dd class="card_date">2021. 06. 17</dd>
                     </dl>
                   </a>
                 </li>
+                
                 <li>
                   <a href="#">
-                    <div class="card_img">
-                      <!-- 카드 이미지 -->
-                    </div>
+                    <div class="card_img"> <!-- 카드이미지 --> </div>
                     <dl>
-                      <dt class="card_sub_title">espresso</dt>
+                      <dt class="card_sub_title">God father</dt>
                       <dd class="card_narr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium nihil </dd>
                       <dd class="card_date">2021. 06. 17</dd>
                     </dl>
                   </a>
                 </li>
+                
                 <li>
                   <a href="#">
-                    <div class="card_img">
-                      <!-- 카드 이미지 -->
-                    </div>
+                    <div class="card_img"> <!-- 카드이미지 --> </div>
                     <dl>
-                      <dt class="card_sub_title">latte art</dt>
+                      <dt class="card_sub_title">God father</dt>
                       <dd class="card_narr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium nihil </dd>
                       <dd class="card_date">2021. 06. 17</dd>
                     </dl>
                   </a>
                 </li>
+                
                 <li>
                   <a href="#">
-                    <div class="card_img">
-                      <!-- 카드 이미지 -->
-                    </div>
+                    <div class="card_img"> <!-- 카드이미지 --> </div>
                     <dl>
-                      <dt class="card_sub_title">God Father</dt>
+                      <dt class="card_sub_title">God father</dt>
+                      <dd class="card_narr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium nihil </dd>
+                      <dd class="card_date">2021. 06. 17</dd>
+                    </dl>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="#">
+                    <div class="card_img"> <!-- 카드이미지 --> </div>
+                    <dl>
+                      <dt class="card_sub_title">God father</dt>
+                      <dd class="card_narr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium nihil </dd>
+                      <dd class="card_date">2021. 06. 17</dd>
+                    </dl>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="#">
+                    <div class="card_img"> <!-- 카드이미지 --> </div>
+                    <dl>
+                      <dt class="card_sub_title">God father</dt>
                       <dd class="card_narr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium nihil </dd>
                       <dd class="card_date">2021. 06. 17</dd>
                     </dl>
@@ -194,7 +215,8 @@
       </article><!-- // #bestBox -->
       
       <article id="galleryBox">
-        <h2 class="max_width_01 area_title">area_title</h2>
+        <h2 class="max_width_01 area_title">추천 미리보기</h2>
+
         <div class="max_width_01 area_content">
           <div class="gallery_main_content">
             <span class="blind">대표 이미지 설명</span>
@@ -210,20 +232,20 @@
       
       <aside id="sponsorBox">
         <h2 class="blind">후원사</h2>
-        <div class="max_width_01 sponsor_area">
+        <div class="max_width_01 sponsor_area blind_area">
           <!-- sponsor_area -->
           <ul>
-            <li>후원사_01</li>
-            <li>후원사_02</li>
-            <li>후원사_03</li>
-            <li>후원사_04</li>
-            <li>후원사_05</li>
-            <li>후원사_06</li>
-            <li>후원사_07</li>
-            <li>후원사_08</li>
-            <li>후원사_09</li>
-            <li>후원사_10</li>
-            <li>후원사_11</li>
+            <li><a href="#"><span>후원사_01</span></a></li>
+            <li><a href="#"><span>후원사_02</span></a></li>
+            <li><a href="#"><span>후원사_03</span></a></li>
+            <li><a href="#"><span>후원사_04</span></a></li>
+            <li><a href="#"><span>후원사_05</span></a></li>
+            <li><a href="#"><span>후원사_06</span></a></li>
+            <li><a href="#"><span>후원사_07</span></a></li>
+            <li><a href="#"><span>후원사_08</span></a></li>
+            <li><a href="#"><span>후원사_09</span></a></li>
+            <li><a href="#"><span>후원사_10</span></a></li>
+            <li><a href="#"><span>후원사_11</span></a></li>
           </ul>
         </div>
       </aside><!-- // #sponsorBox -->
@@ -234,7 +256,7 @@
           <div class="info_company clearfix">
             <div class="company_content">
               <h3 class="blind">info_company</h3>
-              <ul class="list_corp first_margin">
+              <ul class="list_corp">
                 <li><a href="#">이용약관</a></li>
                 <li><a href="#">개인정보처리방침</a></li>
                 <li><a href="#">운영정책</a></li>
@@ -246,10 +268,12 @@
               <address>
                 <p>서울특별시 강남구 논현동 000 MEGA빌딩 (서울특별시 강남구 논현동 000-00)</p>
                 <dl class="clearfix">
-                  <dt>Tel</dt>
+                  <dt>tel</dt>
                   <dd>02-0000-0000</dd>
                   <dt>fax</dt>
                   <dd>02-0000-0001</dd>
+                </dl>
+                <dl class="clearfix">
                   <dt>사업자등록번호</dt>
                   <dd>100-00-00000</dd>
                   <dt>통신판매업 신고</dt>
@@ -259,16 +283,15 @@
                 </dl>
                 <p>© coffinx Corp. All rights reserved.</p>
               </address>
+            </div><!-- // .company_content -->
 
-            </div> <!-- company_content -->
-
-            <div class="social_family clearfix">
+            <div class="social_family">
               <h3 class="blind">social list and family site</h3>
               <div class="social">
-                <ul class="last_margin">
-                  <li><a href="#" class="blind">sns_01</a></li>
-                  <li><a href="#" class="blind">sns_02</a></li>
-                  <li><a href="#" class="blind">sns_03</a></li>
+                <ul>
+                  <li><a href="#">sns_01</a></li>
+                  <li><a href="#">sns_02</a></li>
+                  <li><a href="#">sns_03</a></li>
                 </ul>
               </div>              
               <div class="family_site">
