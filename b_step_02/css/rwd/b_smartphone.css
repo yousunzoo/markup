@@ -1,0 +1,6 @@
+/* b_smartphone.css */
+/* smartphone---------- */
+@media screen and (max-width:767px) {
+  #wrap {background-color: #faa;}
+}
+/* (max-width:767px) */

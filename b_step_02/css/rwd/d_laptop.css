@@ -1,0 +1,8 @@
+/* d_laptop.css */
+/* -------------------------------- */
+@media screen and (min-width:1440px) {
+  #wrap {
+    background-color: #ddd;
+  }
+}
+/* (min-width:1440px) */
