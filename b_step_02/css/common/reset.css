@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* reset.css */
 :root {
-  font-size: 16px;
+  font-size: 16px; --color-red:#faa;
 }
 
 body {margin:0; line-height:100%;

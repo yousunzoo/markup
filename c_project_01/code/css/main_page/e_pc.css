@@ -1,0 +1,38 @@
+/* e_pc.css */
+@media screen and (min-width:1440px) {
+  /* 기준 디바이스 크기 : 1440px */
+  
+  body {background-color: #adf;}
+  /* #wrap {} */
+
+/* #headBox __________________________________________ */
+#headBox {height : 6.25rem;
+  padding-top:1.25rem; padding-bottom:0.625rem;}
+#headbox > * {display: none;}
+
+
+/* #slideBox __________________________________________ */
+#slideBox   { min-height: 43.75rem; max-height:75rem; padding-top:6.25rem;}  
+
+/* #newBox ____________________________________________  */
+#newBox {height:43.75rem; padding-top : 4.0625rem; padding-bottom:4.375rem;}
+
+/* #subBox ____________________________________________  */
+#subBox     {height: 21.875rem;}
+
+
+/* #bestBox ____________________________________________  */
+#bestBox {height: 43.75rem; 
+  padding-top:10.9375rem; padding-bottom:9.0625rem; }
+
+/* #galleryBox ____________________________________________  */
+#galleryBox { height: 46.875rem; 
+  padding-top: 5rem; padding-bottom:8.125rem;
+}
+
+/* #sponsorBox ____________________________________________  */
+#sponsorBox {height: 6.25rem;}
+
+/* #footBox ____________________________________________  */
+#footBox {height: 28.125rem;}
+} /* @media screen and (min-width:1440px) */

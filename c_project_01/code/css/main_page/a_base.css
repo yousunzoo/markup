@@ -1,0 +1,74 @@
+/* main_page/a_base.css */
+
+@media screen {
+  #wrap {
+    width: 100%;
+    min-width:20rem;
+    height:auto; min-height:62.5rem;
+    margin:auto; padding-top:0;
+  }
+
+/* #headBox __________________________________________ */
+  #headBox { 
+    position: fixed; top: 0; left:0;
+    z-index:1500;
+    width: 100%;
+    /* padding:1.25rem 3.125rem 0.625rem; box-sizing: border-box; */
+    background-color: #fff;
+    background-color: var(--primary_01); }
+
+    #headBox > * {display: none;}
+
+
+  /* #slideBox __________________________________________ */
+#slideBox   { 
+  position: relative;
+  width: 100%; height: 100vh;
+   box-sizing: border-box;
+  background-color: #aaa; }  
+
+
+  /* #newBox ____________________________________________  */
+  #newBox { 
+    position: relative; width: 100%;
+    /* padding-top:3.875rem; box-sizing: border-box; */
+    background-color: #ede; 
+  }
+
+
+  /* #subBox ____________________________________________  */
+#subBox     { 
+  position: relative;
+  width: 100%;
+  /* padding-top:3.125rem; box-sizing: border-box; */
+  /* background-color: #aaa;  */
+  background-color: #ffbd55; 
+}
+
+
+/* #bestBox ____________________________________________  */
+#bestBox { 
+  width: 100%; box-sizing: border-box;
+background-color: #fff;}
+
+/* #galleryBox ____________________________________________  */
+#galleryBox {   
+  width: 100%; box-sizing: border-box;
+  background-color: rgba(255, 189, 85, 0.2);
+}
+
+/* #sponsorBox ____________________________________________  */
+#sponsorBox { 
+  width: 100%;
+  /* padding:0.625rem 0; box-sizing: border-box; */
+  background-color: #999; 
+}
+
+/* #footBox ____________________________________________  */
+#footBox    { 
+  width: 100%;
+  padding-top: 4.25rem; box-sizing: border-box;
+  background-color: #333; }
+}
+
+}
