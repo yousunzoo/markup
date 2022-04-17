@@ -10,7 +10,7 @@ body {margin:0; line-height:100%;
   h1,h2,h3,h4,h5,h6,p,pre,q,blockquote,ul,ol,li,dl,dt,dd,img { 
     margin: 0; padding: 0; border:0;
     font-size:100%;  font-family:inherit;
-    line-height:120%;
+    line-height:120%; font-style: normal;
     vertical-align: baseline;
   }
 

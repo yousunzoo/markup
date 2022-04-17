@@ -1,60 +1,76 @@
 /* b_footbox.css */
-#footBox {
-  width:100%; height:450px;
-  padding-top:68px; box-sizing:border-box;
-  background-color: #333;}
+#footBox    { 
+  width: auto; height: 28.125rem; 
+  padding-top: 4.25rem; box-sizing: border-box;
+  background-color: var(--black_02); }
 
-  .area_foot {height: auto; margin: auto;}
-    .info_logo {
-      width: 120px; height: 70px;
-      margin-bottom: 45px;
+.area_foot {
+  height: auto;  
+}
+  
+  .info_logo{
+    width:7.5rem; height:4.375rem; 
+    margin-bottom:2.8125rem;
+    background-image: url("../../img/footBox/osam_sub_logo.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
     }
-    .info_logo {
-      background-image: url("../../img/loginpage/osam_sub_logo.png");
-      background-image: url("../../img/loginpage/osam_sub_logo.svg");
-    }
+  .info_company{
+    width:100%; height:auto; min-height: 8.4375rem;
+    font-size:0.875rem; color:var(--white);
+  }
 
-    .info_company {
-      position: relative;
-      height: auto;
-    }
-    .company_content {
-      width: 500px; height: 200px;
-    }
+  .company_content {
+    float: left;
+    width: 37.5rem; height: 12.5rem; 
 
-    .company_about {
-      width: 100%;height: 30px; padding:5px 0; box-sizing:border-box; margin-bottom: 20px;
-    }
+  }
 
-    .company_about li {float:left; 
-      width: auto; height:30px; padding:0 10px;
-      text-align: center; font-size: 0.75rem; color:#fff;text-transform: capitalize;
-    }
-    .company_address {padding: 10px; margin-bottom: 25px;}
-    .company_address p {font-size: 0.75rem; color: #fff; line-height: 20px;}
+  .list_corp { 
+    width: 100%; height: 1.6875rem; margin-bottom: 1.5625rem;
+  }
+  .list_corp li {float:left; margin-left:0.875rem;}
+  .list_corp li:first-child {margin-left:0rem;}
+  .list_corp li a {padding:0.3125rem;}
 
-    .copyright {font-size: 00.75rem; color:#fff; margin-left:10px;}
-    .social_family {
-      position : absolute; right:0; bottom:0;
-      width: 160px;height: 160px;
-    }
+  address {width: 100%; height: auto; font-style:normal;}
+  address p{ width: 100%; height: auto;  padding-left:8px;}
+  address dl{
+    width: 100%; height: auto; margin-top:0.3125rem; }
+  address dl:last-of-type {    margin-bottom: 1.875rem;  }
+  address dt{ display:inline-block; padding:0.3125rem; text-transform: uppercase;}
+  address dt::after{content:":"; padding-left:0.75rem;}
+  address dd{ display:inline-block; padding:0.3125rem;}
+  address dd::after{content:"|"; padding-left:0.75rem;}
+  address dd:last-of-type::after{content:""; display: none;}
 
-    .family_btn {width: 100%;height: 40px;margin-bottom: 15px; }
 
-    .family_btn ul {width: 100%; height: 40px; }
-    .family_btn li {
-      float:left;
-      width: 40px; height: 40px; margin-right:20px;
-      background-image: url("../../img/footer/sns.png"); 
-      background-repeat: none;
-    }
+  .social_family {
+    float:right;
+    width: 12.5rem; height: 10rem;
+    margin-top: 2.5rem;
+  }
 
-    .family_btn li:nth-child(1) {background-position: 0 0;}
-    .family_btn li:nth-child(2) {background-position: -60px 0;}
-    .family_btn li:nth-child(3) {background-position: -120px 0;}
+  .social {width: 10rem;height: 2.5rem; margin:auto; margin-bottom:0.5rem;}
+  .social li {float:left; width: 2.5rem;height: 2.5rem; margin-right:1.25rem; 
+  background-image: url("../../img/footBox/sns.png");
+  background-image: url("../../img/footBox/sns.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 50%;
+}
+  .social li:nth-child(2) {background-position: -3.75rem 50%;}
+  .social li:nth-child(3) {background-position: -7.5rem 50%;}
 
-    .family_01 {width: 160px;height: 30px;
-    background-color: #fff; border-radius: 5px;margin-bottom: 10px;}
-    .family_01 h3 {margin-left:20px; font-size: 0.75rem; line-height: 30px; text-transform: capitalize;}
-    .family_02 {width: 160px;height: 50px;background-color: #fff;border-radius: 5px;}
+  .family_site {
+    width: 10rem; height: 1.875rem; 
+    margin:auto; margin-bottom:0.5rem; 
+    padding:0.3125rem 0.625rem; box-sizing:border-box; border-radius:0.1875rem; 
+    background-color: var(--white);}
+  .family_site h3 {float:left; color:var(--black_02); font-size:0.75rem; text-align: 1rem; text-transform: capitalize;}
+  .family_site select {float:right; width: 1.25rem; height: 1.25rem;}
 
+  .authentication {
+    width:10rem; height: 3.125rem; 
+    margin: auto; border-radius: 0.1875rem; 
+    background-color: var(--white);}

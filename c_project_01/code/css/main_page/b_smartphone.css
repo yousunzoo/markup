@@ -24,8 +24,9 @@
   }
   #navBox:before,
   #navBox::before {
-    content: ""; display: block; position: absolute; top:0; left:0; width: 100%;height: 100%; z-index:-1;
-    background-color: rgba(26, 93, 84, 1); opacity: 0.85;
+    content: ""; display: block; position: absolute; top:0; left:0;
+    width: 100%; height: 100%; z-index:-1;
+    background-color: var(--primary_01); opacity: 0.85;
   }
 
   #navBox h2 {
@@ -38,7 +39,7 @@
     background-size: contain;
   }
   .unb, .gnb {float:none; width: 100%; min-width:auto; height:auto;}
-  .unb {width:80%; margin:auto; margin-bottom:16px; border-bottom:1px solid #fff;}
+  .unb {width:80%; margin:auto; margin-bottom:1rem; border-bottom:0.0625rem solid #fff;}
   .unb li { float:left; width: calc(50% - 10px) ; height: auto; 
     margin:0; margin-bottom:0.625rem ; }
   .unb a {height: 1.875rem; line-height: 1.875rem; font-size:1rem;}
@@ -52,35 +53,56 @@
   .gnb a {display: block; width: 100%; height: 100%; 
     padding:0; border:0.0625rem solid #fff; border-radius: 0.3125rem;
     color:#fff; line-height: 3.125rem; 
-    font-size:18px; font-weight:400;
+    font-size:1.125rem; font-weight:400;
   } 
 
   /* #slideBox __________________________________________ */
-#slideBox   {min-height:31.25rem; padding-top:3.125rem;}  
+#slideBox   {min-height:31.25rem; max-height:56.25rem;
+  padding-top: 3.125rem;}  
 
+
+  /* slide button */
+  .slide_btn {min-width:auto; bottom:auto;}
+  .slide_btn button{ 
+    width:1.875rem; height:100vh; max-height:900px;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-color:var(--gray_op);
+    }
+
+  /* slide area */
+  .slide_area {padding:0; background-image: none;}
+    .slide_content {width: 100%; height:100%;}
+    .slide_content_part {width: 15.625rem; left:50%; transform:translate(-50%);}
+    .slide_content_part h3 {font-size: 1.625rem;}
+    .slide_content_part p {font-size:0.875rem; margin-bottom:0.875rem; }
+    .slide_content_part .link {height:2.5rem;}
+    .slide_content_part .link a {font-size:1.125rem; line-height:2.5rem;}
+    .link i {margin-top:0.75rem;}
+
+    .slide_img_part {width: 100%;height: 100%;}
+    .slide_01 {background-size: cover;}
 
   /* #newBox ____________________________________________  */
-  #newBox {
-    height:100vh; min-height:37.5rem; max-height: 37.5rem;
-  padding-top: 5rem; padding-bottom:5.625rem;
-  }
+  #newBox {height:37.5rem; padding-top: 5rem; padding-bottom:5.625rem; }
 
   .area_title{
     width: 100%; height:auto; text-align: center;  font-size:1.75rem; }
 
-  
-  .area_indicator {bottom:4.375rem;}
+  .area_indicator {width: 6rem;}
+  .area_indicator li {width: 1.25rem;height: 1.25rem; margin-left:1.125rem;}
 
-  .newBox_area {width:50.875rem; height: 20rem;}
+  .newBox_area {width:50.875rem; height: 20rem; margin-top:2rem;}
   .newBox_area li {width: 16.25rem; margin-left:1.0625rem;}
 
 
   /* #subBox ____________________________________________  */
-#subBox {height: 100vh; min-height:31.25rem; background-color: #fff;}
+#subBox {height: 100vh; min-height:31.25rem; background-color: var(--white);}
 #subBox > .area { width: 100%; min-width: auto; height: 100%;}
-.sub_area {z-index: 100; left:50%; bottom:25%; transform:translateX(-50%); width: 90%;}
+.sub_area {z-index: 100; left:50%; bottom:25%; transform:translateX(-50%); width: 16.25rem;}
 
-.sub_area p {min-height:5rem; margin-bottom: 2.1875rem;}
+.sub_area h2 {text-align: center;}
+.sub_area p {min-height:5rem; margin-top:1.25rem; margin-bottom: 5rem;}
 .sub_area_btn {height: auto;}
 #subBox .sub_area_btn a {display:block; float: none;  margin-bottom: 0.875rem;}
 #subBox .sub_area_btn a:nth-child(1) {width: 100%; height: 3.75rem; line-height: 3.75rem; font-weight: 700;}
@@ -93,18 +115,60 @@
 
 
 /* #bestBox ____________________________________________  */
-#bestBox { height:auto; min-height: 43.75rem; padding:2.5rem; padding-bottom:8.75rem; }
+#bestBox {position: relative; 
+  height:auto; min-height: 43.75rem; padding:0; padding-bottom:12.5rem;}
+
+#bestBox > .area {width:18.75rem; min-width: auto; height:auto;}
+
+.best_area {
+  float:none;
+  width: 100%; height:auto; margin-top:3.125rem; margin-bottom:3.375rem;}
+  .best_area h2 {width:15.625rem; height:auto; text-align: center; margin:auto; margin-bottom:0.5rem; }
+  .best_area p {width:12.5rem; height:auto; margin:auto;}
+
+.best_btn {display: none;}
+.more_btn {position: absolute; bottom:140px; left:50%;
+  width:8.75rem; transform:translateX(-50%) }
+
+.best_card_list {float:none; width:100%; height: auto;}
+.best_card_list ul {width: 100%;}
+.best_card_list li:nth-child(1),
+.best_card_list li {float:none; margin:auto; margin-bottom:1.375rem;}
+.best_card_list li:nth-child(n+4) {display: none;}
 
 /* #galleryBox ____________________________________________  */
-#galleryBox {height:auto; min-height: 46.875rem; 
-  padding-top: 1.5rem;  padding-bottom:8.75rem; 
-}
+#galleryBox {min-height: 46.875rem; padding-top: 1.5rem;  padding-bottom:8.75rem;}
+#galleryBox .max_width_01 {height:auto;}
+#galleryBox .area_title {text-align: center; margin-bottom:20px;}
+#galleryBox .area_content {width:18.75rem;}
+
+.gallery_main_content {position:relative; float:none; min-width:18.75rem; width:auto; margin-bottom:2.5rem; }
+#galleryBox .gallery_list {position: inherit; width: 18.75rem;}
+.gallery_list li {font-size: 1.75rem;}
+
+
 
 /* #sponsorBox ____________________________________________  */
 #sponsorBox { height: 25rem; }
+.sponsor_area {width:18.75rem; height:16.875rem; margin:0; padding: 0;}
+.sponsor_area ul {padding:0 0.625rem}
+.sponsor_area li {margin-right: 1.25rem;}
+.sponsor_area li:nth-child(2n) {margin-right:0;}
+
 
 /* #footBox ____________________________________________  */
-#footBox    {height: 26.5625rem; }
-#footBox > * {display: none;}
+#footBox {position:relative; height: 26.5625rem; }
+.info_logo {margin:auto; margin-bottom:3.375rem;}
+.company_content {width: auto;}
+
+.company_content .list_corp, .company_content .building,
+.company_content dl {display: none;}
+.copyright {position:absolute; bottom:1.875rem; left:0; right:0; width:100%; margin:auto; padding:0; text-align:center;}
+
+.social_family {float:none; 
+  position: absolute; left:0; right:0; margin:auto;}
+.social {margin-bottom:1.5625rem;}
+.social li {float:left;}
+.family_site {margin-bottom:1rem;}
 
 } /* @media screen and (max-width:599px) */

@@ -9,7 +9,7 @@
   margin:auto;}
   
   @media screen and (max-width:939px) {
-    .ax_width_01 {width: auto; min-width:auto;}
+    .max_width_01 {width: auto; min-width:auto;}
   }
 
 .first_margin > li:first-child {margin-left:0;}
@@ -26,13 +26,6 @@
 .blind {display:block; position : absolute;
   z-index:-1; width: 0; height: 0;
   overflow: hidden;}
-
-  /* layout */
-  .area_content{
-    width:940px; height:370px; 
-    margin:48px auto 0;
-  }
-  
 
 
 /* .blind {font-size:0;} */

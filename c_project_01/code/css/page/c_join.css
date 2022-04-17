@@ -1,82 +1,112 @@
 /* c_join.css */
 
 #wrap {
-  background-image: url(../../img/joinpage/login_bg.png);
+  background-image: url("../../img/join_page/login_bg.png");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
   }
 
 
-#joinBox {width: 1100px; height: auto;
-  margin:auto; margin-top:200px; margin-bottom : 250px;
-  box-shadow: 8px 8px 12px rgba(0,0,0,0.25);
+#joinBox {width: 68.75rem; height: auto;
+  margin:auto; margin-top:12.5rem; margin-bottom : 15.625rem;
+  box-shadow: 0.5rem 0.5rem 0.75rem rgba(0,0,0,0.25);
   border-radius: 5px; overflow: hidden;
-  background-color: #fff;}
+  background-image: url("../../img/join_page/login_bg.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
 
 .intro_part {float:left; position:relative; z-index: 100;
-width: 460px; height: 1000px;
-padding-top: 200px; padding-right: 55px; box-sizing: border-box;
+width: 28.75rem; height: 62.5rem;
+padding-top: 12.5rem; padding-right: 3.4375rem; box-sizing: border-box;
 text-align: right;
 overflow: hidden;
-background-image: url(../../img/joinpage/join_intro_gradient.png);
+background-image: url("../../img/join_page/join_intro.png");
 background-repeat: no-repeat;
 background-position: 0 50%;
 background-size: cover;
 }
 
-.intro_inner {float: right; width: 300px; height: auto;}
+.intro_part:before, .intro_part::before {
+  content:""; display: block; position:absolute; z-index:-1; top:0; left:0; width: 100%;height: 100%;
+  background-image: linear-gradient(var(--white), transparent);
+}
+
+.intro_inner {float: right; width: 18.75rem; height: auto;}
 
 .company_logo {
   display: inline-block;
-  width: 120px; height: 70px;
-  background-image: url(../../img/joinpage/osam_logo.png); background-image: url(../../img/joinpage/osam_logo.svg);
+  width: 7.5rem; height: 4.375rem;
+  background-image: url("../../img/joinpage/osam_logo.png");
+  background-image: url("../../img/join_page/osam_logo.svg");
   background-repeat: no-repeat; background-position: 50% 50%; background-size: contain;}
 
   .intro_inner > h2 {width: 100%; height: auto;
-    margin-top: 50px; margin-bottom: 20px;
-    color: #171717;
+    margin-top: 3.125rem; margin-bottom: 1.25rem;
+    color: var(--black_02);
     font-size: 2.5rem; font-weight: 700; text-transform: capitalize;}
   .intro_inner > p {
     width: 100%; height: auto;
-    color:#505050; font-size: 1.125rem; font-weight: 500; line-height: 1.5rem;
+    color:var(--deep_gray); font-size: 1.125rem; font-weight: 500; line-height: 1.5rem;
   }
 
   /* ---------------------------- */
 .join_form {float: left;
-width: 640px; height: 1000px;
-padding-top: 100px; box-sizing: border-box;
-background-color: #fff;}
+width: 40rem; height: 62.5rem;
+padding-top: 12.5rem; box-sizing: border-box;
+background-color: var(--white);}
 
 form, fieldset {margin: 0; padding: 0; border: 0;}
 legend {display: block; width: 0;height: 0; position:absolute; z-index: -1; overflow: hidden;}
 
-.join_form .user_input_01 {width:auto; height:auto; margin-top:65px;}
-.join_form .user_input_02 {width:auto; height:auto; margin-top:80px;}
+.join_form .user_input_01 {width:auto; height:auto; margin-top:4.0625rem;}
+.join_form .user_input_02 {width:auto; height:auto; margin-top:5rem;}
 
 .join_form > form {
-  width: 463px; height: 535px;
+  width: 28.9375rem; height: auto;
   margin: auto;
-  background-color: #adf;
 }
 
-.join_form i {float:left;
-  width: 50px; height: 50px; font-size: 2rem;
+.join_form i {float:left; margin-right:1.875rem;text-align: center;
+  width: 3.125rem; height: 3.125rem; font-size: 32px; color:var(--primary_01)
 }
 
 .user_input {
-  width: 100%; height: 50px;
-  margin-bottom: 27px; 
-  padding-left: 8px; padding-bottom: 10px; box-sizing: border-box;
-  border-bottom : 2px solid #1a5d54;
+  width: 100%; height: 3.125rem;
+  margin-bottom: 1.6875rem; 
+  padding-left: 0.5rem; padding-bottom: 0.625rem; box-sizing: border-box;
+  border-bottom : 0.125rem solid var(--primary_01);
 }
 
 .user_input input {
-  float: left; width:300px; height: 100%;
+  float: left; width:18.75rem; height: 100%;
   border:0; padding:0;
-  font-size: 1.125rem; color:#757575; text-indent: 8px;
+  font-size: 1.125rem; color:var(--deep_gray); text-indent: 0.5rem;
 }
 
-.user_input_02 input {display:inline-block; width: 90px; height: 40px;}
+.user_input_02 {width: 100%; height: 8.4375rem; margin-bottom:8.75rem;}
+.user_input_02 input {display:inline-block; width: 5.625rem; height: 2.5rem; margin-right:35px;}
 
+.user_input select {
+  float: left; 
+  width:5.625rem; height: 2.5rem;
+  border:0; padding:0; margin-right: 35px;
+  font-size: 1.125rem; color:var(--deep_gray); text-indent: 0.5rem;}
 
+/* buttons */
+.btns {width: 28.75rem; height: 3.75rem;}
+.cancel_btn {
+  float:left; 
+  width: 9.375rem; height: 100%; 
+  border:0.0625rem solid var(--black_02); border-radius: 0.5rem; 
+  font-size:1rem; color :var(--deep_gray);
+}
+.submit_btn {
+  float:right; 
+  width: 18.75rem; height: 100%; 
+  border-radius:0.5rem; 
+  color:var(--white); font-size:1.375rem; font-weight:700;
+  background-color: var(--primary_01);
+}

@@ -7,11 +7,12 @@
 /* #headBox __________________________________________ */
 #headBox {height : 6.25rem; padding:1.25rem 3.125rem 0.625rem}
 
-#logo { float:left; width: 120px;height: 70px; }
+#logo { float:left; width: 7.5rem;height: 4.375rem; }
 
 
 /* #slideBox __________________________________________ */
 #slideBox   { min-height: 37.5rem; padding-top:6.25rem;}  
+
 
 /* #newBox ____________________________________________  */
 #newBox { height:43.75rem; padding-top : 4.0625rem; padding-bottom:4.375rem;}
@@ -23,29 +24,34 @@
 #subBox     {height: 21.875rem;
 padding-top:10.5rem; padding-bottom:9.5rem; padding-left:2.5rem;}
 
-.sub_area {right: 70px; width: 400px;}
+.sub_area {right: 4.375rem; width: 25rem;}
 
 .sub_area_img {
   float:left;
   width: 28.75rem; height: 18.75rem;
   transform:translateY(-1.5625rem);
   background-image: url("../../img/main_page_re/desktop/e_subBox/sub_img.png");
-  box-shadow:1.875rem 1.5625rem 0 #EFEFEF;
+  box-shadow:1.875rem 1.5625rem 0 var(--white_02);
 }
 
 
 /* #bestBox ____________________________________________  */
-#bestBox { height: 43.75rem;
-padding-top:10.9375rem; padding-bottom:9.0625rem;}
+#bestBox { height: 43.75rem; padding: 10.9375rem 3.125rem 9.0625rem; overflow-x: hidden;}
+
+
+
 
 /* #galleryBox ____________________________________________  */
 #galleryBox { height: 46.875rem; 
 padding-top: 5rem; padding-bottom:8.125rem;
 }
 #galleryBox .area_content {width: 100%;}
-
+.gallery_main_content p {display: none;}
 /* #sponsorBox ____________________________________________  */
 #sponsorBox { height: 6.25rem;}
+#sponsorBox > h2 {display: none;}
+.sponsor_area {width:58.75rem; height: 6.25rem;}
+.sponsor_area ul {width:200%; height: 100%; }
 
 /* #footBox ____________________________________________  */
 #footBox {height: 28.125rem; }

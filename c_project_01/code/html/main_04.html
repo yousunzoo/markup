@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../fonts/fontawesome5/css/all.min.css">
+    <link rel="stylesheet" href="../fonts/fontawesome/css/all.min.css">
     
     <link rel="stylesheet" href="../css/common/reset.css">
     <link rel="stylesheet" href="../css/common/common.css">    
@@ -70,15 +70,15 @@
       
       <section id="slideBox">
         <h2 class="blind">주요 광고영역</h2>
-        <div class="slide_btn blind_area">
+        <div class="slide_btn blind_area clearfix">
           <button type="button" class="next"><span>다음 내용 보기</span></button>
           <button type="button" class="prev"><span>이전 내용 보기</span></button>
         </div>
         <div class="slide_area">
           <div id="adCon_01" class="slide_content">
             <div class="slide_content_part">
-              <h3>adCon_01</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, illum.</p>
+              <h3>Banner Title</h3>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium nihil doloribus harum illum molestiae delectus distinctio inventore maxime sit </p>
               <div class="link">
                 <a href="#">
                   바로가기
@@ -118,7 +118,7 @@
  
       </article><!-- // #newBox -->
       
-      <section id="subBox" class="none">
+      <section id="subBox">
         <div class="max_width_01 area">
           <div class="sub_area">
             <h2>보조 광고영역</h2>
@@ -136,11 +136,11 @@
         </div>
       </section><!-- // #subBox -->
       
-      <article id="bestBox" class="none">
+      <article id="bestBox" >
         <div class="max_width_01 area">
             <div class="best_area">
-              <h2>인기 메뉴 리스트</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, nisi.</p>
+              <h2>인기 메뉴</h2>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium nihil.</p>
               <div class="best_btn blind_area">
                 <button type="button">
                   <i class="fas fa-chevron-right"></i>
@@ -156,7 +156,7 @@
               </div>
             </div>
             
-            <div class="best_card_list first_margin">
+            <div class="best_card_list last_margin">
               <ul>
                 <li>
                   <a href="#">
@@ -228,12 +228,13 @@
         </div>
       </article><!-- // #bestBox -->
       
-      <article id="galleryBox" class="none">
+      <article id="galleryBox">
         <h2 class="max_width_01 area_title">추천 미리보기</h2>
 
         <div class="max_width_01 area_content">
           <div class="gallery_main_content">
             <span class="blind">대표 이미지 설명</span>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium nihil</p>
           </div>
           <ul class="gallery_list">
             <li><button type="button">list내용 _ 01</button></li>
@@ -244,11 +245,11 @@
         </div>
       </article><!-- // #galleryBox -->
       
-      <aside id="sponsorBox" class="none">
-        <h2 class="blind">후원사</h2>
+      <aside id="sponsorBox">
+        <h2>sponsors</h2>
         <div class="max_width_01 sponsor_area blind_area">
           <!-- sponsor_area -->
-          <ul>
+          <ul class="clearfix">
             <li><a href="#"><span>후원사_01</span></a></li>
             <li><a href="#"><span>후원사_02</span></a></li>
             <li><a href="#"><span>후원사_03</span></a></li>
@@ -264,7 +265,7 @@
         </div>
       </aside><!-- // #sponsorBox -->
       
-      <footer id="footBox" class="none">
+      <footer id="footBox">
         <div class="max_width_01 area_foot">
           <h2 class="info_logo"><span class="blind">오삼커피 회사 정보</span></h2>
           <div class="info_company clearfix">
@@ -278,9 +279,9 @@
                 <li><a href="#">공지사항</a></li>
                 <li><a href="#">Contact Us</a></li>
               </ul>
-
+    
               <address>
-                <p>서울특별시 강남구 논현동 000 MEGA빌딩 (서울특별시 강남구 논현동 000-00)</p>
+                <p class="building">서울특별시 강남구 논현동 000 MEGA빌딩 (서울특별시 강남구 논현동 000-00)</p>
                 <dl class="clearfix">
                   <dt>tel</dt>
                   <dd>02-0000-0000</dd>
@@ -295,20 +296,21 @@
                   <dt>대표이사</dt>
                   <dd>000</dd>
                 </dl>
-                <p>© coffinx Corp. All rights reserved.</p>
+                <p class="copyright">© coffinx Corp. All rights reserved.</p>
               </address>
             </div><!-- // .company_content -->
-
+    
             <div class="social_family">
               <h3 class="blind">social list and family site</h3>
               <div class="social">
-                <ul>
-                  <li><a href="#">sns_01</a></li>
-                  <li><a href="#">sns_02</a></li>
-                  <li><a href="#">sns_03</a></li>
+                <ul class="last_margin blind_area">
+                  <li><a href="#"><span>sns_01</span></a></li>
+                  <li><a href="#"><span>sns_02</span></a></li>
+                  <li><a href="#"><span>sns_03</span></a></li>
                 </ul>
               </div>              
-              <div class="family_site">
+              <div class="family_site clearfix">
+                <h3>family site</h3>
                 <label for="site" class="blind">family site</label>
                 <select name="" id="site">
                   <option value="#">site_01</option>
@@ -320,7 +322,7 @@
             </div><!-- // .social_family -->
           </div>
         </div>
-      </footer><!-- // #footBox -->
+      </footer> <!-- // footBox -->
     </div><!-- // #wrap -->
   </body>
 </html>
