@@ -104,22 +104,33 @@
 
           <div class="user_input_02">
             <div class="user_input usrtel">
-              <label for="usrTelFirst"><span class="blind">등록할 사용자의 전화번호를 입력하세요.</span>
+              <label for="usrTelFirst"><span class="blind">등록할 사용자의 첫번째 전화번호를 입력하세요.</span>
                 <i class="fa-solid fa-mobile-button"></i>
               </label>
-              <input type="tel" id="usrTelFirst" name="usrTelFirst" value="" placeholder="010" required />
-              <input type="tel" id="usrTelMid" name="usrTelMid" value="" placeholder="0000" required />
-              <input type="tel" id="usrTelLast" name="usrTelLast" value="" placeholder="0000" required />
+
+              <div class="input_list">
+                <input type="tel" id="usrTelFirst" name="usrTelFirst" value="" placeholder="010" required />
+              </div>
+              <div class="input_list">
+                <label for="usrTelMid" class="blind">등록할 사용자의 중간 전화번호를 입력하세요</label>
+                <input type="tel" id="usrTelMid" name="usrTelMid" value="" placeholder="0000" required />
+              </div>
+              <div class="input_list">
+                <label for="usrTelLast" class="blind">등록할 사용자의 마지막 전화번호를 입력하세요</label>
+                <input type="tel" id="usrTelLast" name="usrTelLast" value="" placeholder="0000" required />
+              </div>
+
+              
             </div>
 
             <div class="user_input usrbirth">
-              <label for="usrBirthY"><span class="blind">등록할 사용자의 생년월일을 입력하세요.</span>
+              <label for="usrBirthY"><span class="blind">등록할 사용자의 년도를 입력하세요.</span>
                 <i class="fa-solid fa-calendar"></i>
               </label>
               <input type="text" id="usrBirthY" name="usrBirth" value="" placeholder="년(4자)" required />
               <label for="site"><span class="blind">등록할 사용자의 월을 선택하세요</span></label>
-              <select name="usrBirth" id="site" required >
-                <option>월</option>
+              <select name="usrBirthM" id="usrBirthM" required >
+                <option value="0">월</option>
                 <option value="1월">1월</option>
                 <option value="2월">2월</option>
                 <option value="3월">3월</option>
@@ -133,6 +144,7 @@
                 <option value="11월">11월</option>
                 <option value="12월">12월</option>
               </select>
+              <label for="usrBirthD" class="blind">등록할 사용자의 일을 입력하세요</label>
               <input type="text" id="usrBirthD" name="usrBirth" value="" placeholder="일" required />
             </div>
           </div>
@@ -193,8 +205,8 @@
           </div>              
           <div class="family_site clearfix">
             <h3>family site</h3>
-            <label for="site" class="blind">family site</label>
-            <select name="" id="site">
+            <label for="familySite" class="blind">family site</label>
+            <select name="familySite" id="familySite">
               <option value="#">site_01</option>
               <option value="#">site_02</option>
               <option value="#">site_03</option>

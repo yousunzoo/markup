@@ -87,7 +87,18 @@ legend {display: block; width: 0;height: 0; position:absolute; z-index: -1; over
 }
 
 .user_input_02 {width: 100%; height: 8.4375rem; margin-bottom:8.75rem;}
-.user_input_02 input {display:inline-block; width: 5.625rem; height: 2.5rem; margin-right:35px;}
+.user_input_02 .input_list {position:relative; display:inline-block; margin-right:35px; }
+.user_input_02 .input_list:before,
+.user_input_02 .input_list::before {
+  content:""; display: block; position:absolute; top:0; bottom:0; right:0; width:10px; height:2px; margin:auto; border-radius:4px;
+  background-color: var(--primary_01);}
+.user_input_02 .input_list:last-of-type:before,
+.user_input_02 .input_list:last-of-type::before {display:none;}
+
+
+
+.user_input_02 input {width: 5.625rem; height: 2.5rem; margin-right:35px;}
+.user_input_02 .input_list:last-of-type {margin-right:0} 
 
 .user_input select {
   float: left; 
