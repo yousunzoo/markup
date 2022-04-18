@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- b_01_js_link.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- explorer 맨 마지막 버전을 사용해라 -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../fonts/fontawesome/css/all.min.css">
+  
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/src/b_01_js_link.css">
+
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <!-- <script src="../js/src/b_01_js_link.js"></script> -->
+  
+  <title>b_01_js_link</title>
+
+  <style>
+    /* body {background-color: #acf;} */
+  </style>
+  <script>
+    // document.write('<a href="#">js를 처음으로 작성하였습니다.</a><br />');
+    document.write('<a href="#">js를 주석 아래에 작성하였습니다.</a>');
+    // script에서는 태그 내의 속성도 문자로 인식함
+  </script>
+  <!-- head 태그 작성 순서 확인! -->
+</head>
+<body>
+  <!-- layout -->
+<div class="code_exam">
+    <h1><a href="./a_content.html">웹표준</a></h1>
+    <hr />
+
+    <div class="part">
+      <h2>javascript - 코드 삽입 위치</h2>
+      <div class="ex_wrap"\>
+        <script>
+          /*
+          document.write('<p>js코드를 문서 중간에 작성</p>');
+          document.write('<p>js코드를 문서 중간에 작성</p>');
+          document.write('<p>js코드를 문서 중간에 작성</p>');
+          document.write('<p>js코드를 문서 중간에 작성</p>');
+          */
+        </script>
+      </div>
+    </div> <!-- //.part -->
+
+    <div class="part">
+      <h2>javascript - 주석 작성 방법</h2>
+      <div class="ex_wrap"></div>
+    </div><!-- //.part -->
+
+</div>
+
+  <!-- javascript -->  
+  <script src="../js/src/b_01_js_link.js"></script>
+  <script>
+    // document.write ('문서의 마지막에 내용을 작성');
+    // alert('메세지');
+    console.log('결과 확인');
+    console.warn ('경고 !!!');
+    console.error ('문제 발생 !!!');
+    console.info ('정보 !!!');
+  </script>
+</body>
+</html>
+
+<!-- <div class="ex_wrap" onclick="console.log('hello')"> : inline 형태 -->
