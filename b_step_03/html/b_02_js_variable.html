@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- b_02_js_variable.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- explorer 맨 마지막 버전을 사용해라 -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../fonts/fontawesome/css/all.min.css">
+  
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <!-- <link rel="stylesheet" href="../css/src/b_02_js_variable.css"> -->
+
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <title>b_02_js_variable</title>
+</head>
+<body>
+  <!-- layout -->
+<div class="code_exam">
+    <h1><a href="./a_content.html">웹표준</a></h1>
+    <hr>
+    <div class="part">
+      <h2>javascript - variable</h2>
+      <p>변수란, 하나의 형태를 지정하여 그 내용을 변수에 담는 것<br />
+      하나의 형태 안에 여러 개의 값 지정 가능</p>
+      <div class="ex_wrap"></div>
+    </div>
+</div>
+
+  <!-- javascript --> 
+  <script>
+    // es5
+
+    var nameSet = 'seon'; // 변수 초기 셋팅
+    console.log(nameSet);
+
+    nameSet = 'yousunzoo'; // 변수를 변경할 때는 var 생략하고 사용
+    console.log(nameSet);
+
+// ---------------------
+    var stringPlus = '문자는';
+    var stringPlus2 = '연결이 가능하다';
+    var stringPlus3 = ' 연결이 가능하다';
+    console.log(stringPlus , stringPlus2); //comma는 앞뒤를 구분해서 연결, 띄어쓰기 처리됨
+    console.log(stringPlus + stringPlus2); // plus는 띄어쓰기 되지 않음
+    console.log(stringPlus + ' ' + stringPlus2);
+    console.log(stringPlus + stringPlus3); 
+
+    var stringSet = stringPlus + stringPlus3;
+    var textSet = '문자는 서로' + ' 연결이 가능하다';
+    var otherText = nameSet + '님 반갑습니다.';
+    
+    console.log(stringSet);
+    console.log(textSet);
+    console.log(otherText);
+
+    var num = 123;
+    var num2 = '1234';
+    console.log(num + 10); //133;
+    console.log(num2 + 10); //123410; //문자와 숫자가 결합하면 강제로 문자화 함
+
+    // ---------------------
+    console.log(reName);
+    var reName = 'seon.web'
+    // 변수는 선언 이전에 변수명을 호출하면 값이 미정의인 상태라고 뜨며 undefined - hoisting
+    // 단, 변수명이 존재하지 않는다면 존재가 없다며 not defined 에러
+    
+    var test; //hoisting
+    console.log('text :',test);
+    
+    test = '값을 나중에 정의';
+    console.log('text :',test);
+
+   // ---------------------
+   
+    var n;
+    console.log(n);
+    n=1;
+    console.log(n);
+    n=2;
+    console.log(n);
+
+  // ---------------------
+   console.clear();
+    var sunLocation = '전라도';
+    console.log(sunLocation);
+    var sunLocation = '경상도';
+    console.log(sunLocation);
+
+  // ------------------------
+  // css와 js는 다른 언어. 선언 방법도 다름
+  // window(html) 내부에 document(body) 내부에 클래스 이름이 .ex_wrap인 첫번째(0) 요소를 가져와서 처리
+  // 내부 -> .
+  // class -> className (class)
+  // 순서 -> [n] : 첫번째를 0, 두번째를 1, 세번째는 2
+
+  var exWrap = document.getElementsByClassName('ex_wrap')[0];
+  var codeInner = '<span>' + sunLocation + '</span>';
+  // exWrap.innerText = codeInner;
+  exWrap.innerHTML = codeInner;
+
+</script>
+</body>
+</html>
