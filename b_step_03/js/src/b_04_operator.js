@@ -55,7 +55,7 @@ n %= 2;
 console.log ('n :', n);
 
 
-console.clear();
+// console.clear();
 // -----------------------------
 
 console.log('n :', n);
@@ -148,6 +148,6 @@ var i=0;
 
 btn.addEventListener('click', function(){
   i += 1;
-par.innerText = "내용이 변경," + i + "번 클릭";  
+par.innerText = "내용이 변경, " + i + "번 클릭";  
 })
 

@@ -51,7 +51,7 @@ fruits.forEach( function(data, idx){
 console.log( (idx +1) + ':' + data );
 })
 
-console.clear();
+// console.clear();
 
 console.log('fruits갯수', fruits.length);
 for(o=0; o< fruits.length ; o++){
@@ -61,7 +61,7 @@ for(o=0; o< fruits.length ; o++){
 // data : 배열 안에 있는 각각의 데이터를 하나씩 뜯어서 보여줌
 // index(idx) : 각 데이터가 배열 중 몇번째인지를 알려줌
 
-console.clear();
+// console.clear();
 // -------------------------------
 // .ex_wrap -> getElementsByClassName('ex_wrap')[];
 // .ex_wrap > ul -> getElementsByTagNam('ul');
