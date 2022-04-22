@@ -66,7 +66,7 @@ console.log(ar3[4][2]);
 console.log(ar3[5][3][0]);
 console.log(ar_02[3][0]);
 
-console.clear();
+// console.clear();
 // -----------------------------------
 var obj = {
   'coffee':'americano',
