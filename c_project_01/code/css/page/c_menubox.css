@@ -1,24 +1,39 @@
 /* c_menubox.css */
 
-#wrap {width: 100%; height: 1000px; background-color: #fff;}
+#wrap {width: 100%; height: auto; background-color: #fff;}
 
-.menu_box {width: 100%; height: 500px;
-  margin:auto; margin-top:200px; 
+.menu_banner {width: 100%; height: 300px; margin-bottom:150px;
+background-color:rgb(210, 253, 253);}
+.menu_inner {width: 70%; height: 80%; margin: auto; padding-top:120px; box-sizing: border-box; }
+.menu_inner h2 {font-size:40px; font-weight: 700; text-transform: capitalize; color:var(--primary_02);
+margin-bottom:30px; }
+.menu_inner p {font-weight: 500; color:var(--light_gray_03)}
+
+
+.menu_box {width: 100%; height: auto;
+  margin:auto; 
   background-color: #eee;}
-.button_list { width: 80%; margin:auto; border-bottom: 2px solid var(--light_gray_02);}
-.menu_btns {width: 750px; height: auto;
-  padding:20px 0;
+
+.btns_area {width: 750px; height: auto;
+  padding:20px 0; font-size: 0;
   margin:auto;}
-.menu_btns > button {width: auto; height:30px;
+  
+.btns_area > button {width: auto; height:30px;
   padding: 0 20px; 
   margin:auto; 
   font-size : 20px; color: var(--light_gray_03); font-weight: 700; 
   text-transform: capitalize;
   border-right:1px solid var(--light_gray_03); }
 
-  .menu_btns > button span {
+  .btns_area > button span {
     padding: 5px 20px; box-sizing: border-box;
     border-radius: 5px;} 
-  .menu_btns > button:last-of-type {border-right: 0px;}
+  .btns_area > button:last-of-type {border-right: 0px;}
 
-  .menu_btns > button:focus span {background-color: var(--primary_01); color:var(--white)}
+  /* .btns_area > button:focus span {background-color: var(--primary_01); color:var(--white)} */
+
+  /* --------------------------------------- */
+  .card_list {width: 80%;min-height:100px; margin:auto; border-top: 2px solid var(--light_gray_02);}
+ 
+iframe {width: 100%; height: 1350px; margin:auto; padding-top:50px; border:0;}
+.tea, .beverage, .dessert, .theme {display: none;}

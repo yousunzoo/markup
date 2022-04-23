@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/* a_coffee_list.css */
+@import url("./list_common.css");
+
+
+.card_columns li .card_img { background-image: url("../../img/main_page/gallery_main_01.png");}
+.card_columns li:nth-child(1) .card_img { background-image: url("../../img/main_page/best_img_01.png");}
+.card_columns li:nth-child(2) .card_img { background-image: url("../../img/main_page/best_img_02.png");}
+.card_columns li:nth-child(3) .card_img { background-image: url("../../img/main_page/best_img_03.png");}

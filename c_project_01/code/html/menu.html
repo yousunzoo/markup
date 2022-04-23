@@ -3,7 +3,8 @@
 <html lang="ko-KR">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"> ] 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -81,18 +82,27 @@
     </header> <!-- // #headBox -->
 
     <article id="menuBox" class="clearfix">
+      <div class="menu_banner">
+      <div class="menu_inner">
+      <h2 class="product">product menu</h2>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias neque obcaecati autem ab cupiditate voluptates ad ex qui saepe quod, beatae odit debitis perspiciatis voluptatum veniam labore! Reiciendis, quaerat. Reiciendis.</p>
+      </div>
+      </div>
+
       <div class="menu_box">
-        <div class="button_list">
-        <div class="menu_btns">
+        <div class="btns_area">
           <button type="button"><span>coffee</span></button>
           <button type="button"><span>tea</span></button>
           <button type="button"><span>beverage</span></button>
           <button type="button"><span>dessert</span></button>
           <button type="button"><span>theme</span></button>
-        </div> <!-- .menu_btns -->
-        </div> <!-- .button_list-->
+        </div> <!-- .btns_area -->
         <div class="card_list">
-          
+          <iframe src="./menu/a_coffee_list.html" class="coffee"></iframe>
+          <iframe src="./menu/b_tea_list.html" class="tea"></iframe>
+          <iframe src="./menu/c_beverage_list.html" class="beverage"></iframe>
+          <iframe src="./menu/d_dessert_list.html" class="dessert"></iframe>
+          <iframe src="./menu/e_theme_list.html" class="theme"></iframe>
         </div>
     </div> <!-- menu_box -->
     </article> <!-- // #menuBox-->
@@ -144,6 +154,10 @@
 
 
   <!-- javascript -->  
+  <script src="../ie/modernizr-custom.js"></script>
+  <script src="../js/common/jquery-3.6.0.min.js"></script>
+  <script src="../js/common/jquery-ui.min.js"></script>
+  <script src="../js/src/menu.js"></script>
 </body>
 </html>
 
