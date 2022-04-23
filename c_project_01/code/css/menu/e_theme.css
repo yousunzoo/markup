@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* c_beverage_list.css */
+/* e_theme.css */
 
 @import url("./list_common.css");
 
@@ -13,7 +13,4 @@
 .card_columns li:nth-child(6) .card_img { background-image: url("../../img/menu_page/beverage/06.png");}
 .card_columns li:nth-child(7) .card_img { background-image: url("../../img/menu_page/beverage/07.png");}
 .card_columns li:nth-child(8) .card_img { background-image: url("../../img/menu_page/beverage/08.png");}
-.card_columns li:nth-child(9) .card_img { background-image: url("../../img/menu_page/beverage/09.png");}
-.card_columns li:nth-child(10) .card_img { background-image: url("../../img/menu_page/beverage/10.png");}
-.card_columns li:nth-child(11) .card_img { background-image: url("../../img/menu_page/beverage/11.png");}
-.card_columns li:nth-child(12) .card_img { background-image: url("../../img/menu_page/beverage/12.png");}
+

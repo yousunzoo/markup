@@ -4,6 +4,19 @@
 
 
 .card_columns li .card_img { background-image: url("../../img/main_page/gallery_main_01.png");}
-.card_columns li:nth-child(1) .card_img { background-image: url("../../img/main_page/best_img_01.png");}
-.card_columns li:nth-child(2) .card_img { background-image: url("../../img/main_page/best_img_02.png");}
-.card_columns li:nth-child(3) .card_img { background-image: url("../../img/main_page/best_img_03.png");}
+.card_columns li:nth-child(1) .card_img { background-image: url("../../img/menu_page/coffee/01.png");}
+.card_columns li:nth-child(2) .card_img { background-image: url("../../img/menu_page/coffee/02.png");}
+.card_columns li:nth-child(3) .card_img { background-image: url("../../img/menu_page/coffee/03.png");}
+.card_columns li:nth-child(4) .card_img { background-image: url("../../img/menu_page/coffee/04.png");}
+.card_columns li:nth-child(5) .card_img { background-image: url("../../img/menu_page/coffee/05.png");}
+.card_columns li:nth-child(6) .card_img { background-image: url("../../img/menu_page/coffee/06.png");}
+.card_columns li:nth-child(7) .card_img { background-image: url("../../img/menu_page/coffee/07.png");}
+.card_columns li:nth-child(8) .card_img { background-image: url("../../img/menu_page/coffee/08.png");}
+.card_columns li:nth-child(9) .card_img { background-image: url("../../img/menu_page/coffee/09.png");}
+.card_columns li:nth-child(10) .card_img { background-image: url("../../img/menu_page/coffee/10.png");}
+.card_columns li:nth-child(11) .card_img { background-image: url("../../img/menu_page/coffee/11.png");}
+.card_columns li:nth-child(12) .card_img { background-image: url("../../img/menu_page/coffee/12.png");}
+.card_columns li:nth-child(13) .card_img { background-image: url("../../img/menu_page/coffee/13.png");}
+.card_columns li:nth-child(14) .card_img { background-image: url("../../img/menu_page/coffee/14.png");}
+.card_columns li:nth-child(15) .card_img { background-image: url("../../img/menu_page/coffee/15.png");}
+.card_columns li:nth-child(16) .card_img { background-image: url("../../img/menu_page/coffee/16.png");}
