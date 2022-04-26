@@ -1,22 +1,5 @@
 // b_11_tab_menu.js
-/*
-  var dataFile;
-  console.log('처음:', dataFile); // 1 (걸리는 시간)
-  $.ajax({
-    url:"../json/menu.json",
-    context:document.body
-  }).done(function(data){
-    dataFile=data;
-    console.log('내부:', dataFile); // 3
-  });
-
-  console.log('외부:', dataFile); // 2 (data불러오는데 시간이 걸려서 3이 수행되기 전엔 undefined로 처리됨)
-
-  setTimeout(function(){
-    console.log('일정시간 후에:', dataFile); //4
-  }, 100);
-
-*/
+// step 1. 
 (function($){
 
 /* 
@@ -25,7 +8,7 @@ $.getJSON("../json/menu.json", function(data){
 }); // json 파일 가져오는데 유용
  ajax : 이미지 등 여러가지 파일을 가져올 수 있음, 외부에 공개하지 못함. getJSON 보다는 보다 명확하게 확인할 수 있음
 */
-
+// step 1 : json data 불러와서 설정 --------------------
 $.ajax({
   url:"../json/menu.json",
   context:document.body
@@ -59,33 +42,110 @@ $.ajax({
       return data.type === tabTitleCheck[n];
     });
   }
-  tabMenuFn(1);
-  console.log(tabMenuSet);
+  // tabMenuFn(0);
+  // console.log(tabMenuSet);
+
+  // title 구성 : tabTitleCheck
+  // title에 따른 메뉴 구성 : 함수 호출 -> tabMenuFn(순서);
+  // title에 따른 메뉴 구성 : 구성 사용 -> tabMenuSet;
 
   // --------------------------------------------------------
+    // step 2 : 불러온 json data 기반으로 구성을 배치
+      // 변수(1차 기존 요소)
+      var tabArea = $('.tab_area');
+      var tabTitle = tabArea.find('.tab_title');
+      var tabContent = tabArea.find('.tab_content');
+
+
+    // tabTitle 내부에 탭메뉴 제목부 구성 : tabTitleCheck 이용
+    tabTitle.html('<ul></ul>');
+    var tabTUl = tabTitle.children('ul');
+    var titleEl = '<li><button type="button"></button></li>'
+    var tabTLen = tabTitleCheck.length
+      // $.each(tabTitleCheck, function(index, data){
+      //   tabTUl.append(titleEl);
+      //   tabTUl.find('button').eq(index).text(data)
+      // });
+    for(i=0; i < tabTLen; i += 1){
+      tabTUl.append(titleEl);
+      tabTUl.find('button').eq(i).text(tabTitleCheck[i]);
+    }
+
+    var tabTLi = tabTitle.find('li');
+    var tabBtn = tabTLi.find('button');
+    tabTLi.css({width:(100 / tabTLen) + '%'})
+    tabTLi.eq(0).addClass('on');
+
+    // --------------------------------------------------------
+    // step 3 : 내용을 구성하기 위한 세팅 및 함수 처리
+    tabContent.html('<ul class="tab_list clearfix"></ul>');
+    var tabConMenu = tabContent.find('.tab_list');
+    
+    var tabMenuSetFn = function(k){
+      tabMenuFn(k); 
+      tabConMenu.empty();
+      console.clear();
+      // tabConMenu.text(JSON.stringify(tabMenuSet));
+      console.log(tabMenuSet);
+      var tabListSet = '\
+      <li>\
+        <div class="img_con">\
+        <span></span>\
+        </div>\
+        <dl>\
+        <dt></dt>\
+        <dd class="text_con"></dd>\
+        <dd class="link_con"><a href="#">자세히보기</a></dd>\
+        </dl>\
+      </li>'
+      
+      var j = 0;
+      var tabSetLen = tabMenuSet.length;
+      var liIdex, tSet, hrefText;
+
+      for (; j <tabSetLen; j+=1){
+      tabConMenu.append(tabListSet);
+      liIdex = tabConMenu.children('li').eq(j);
+      tSet = tabMenuSet[j];
+      hrefText = './'+tSet.couse + '/' + tSet.link;
+
+      liIdex.find('dt').text(tSet.menu);
+      liIdex.find('.text_con').text(tSet.account);
+      liIdex.find('a').attr({href:hrefText});
+      // background-image 설정, 내용 빠져있는 상태
+    } // for
+;    }; // tabMenuSetFn();
+    
+    
+    tabMenuSetFn(0);
+     // -------------------------------------
+     // step 4 : 탭메뉴 처리 설정
+
 
   // 기능 설명
   // 1. 선택된 버튼의 순서를 파악
   // 2. 선택된 버튼의 내용에 맞는 구성을 설정
 
-
   // 변수
-  var tabArea = $('.tab_area');
-  var tabTitle = tabArea.find('.tab_title');
-  var tabTLi = tabTitle.find('li');
-  var tabBtn = tabTLi.find('button');
-  var tabContent = tabArea.find('.tab_content');
-  var tabConMenu = tabContent.find('.tab_list'); 
 
   // 이벤트
   tabBtn.on('click', function(e){
     e.preventDefault();
-    var i = $(this).parent().index();
-    tabBtn.parent().eq(i).addClass('on');
-    tabBtn.parent().eq(i).siblings().removeClass('on');
-    tabConMenu.text('tab 구성' + (i+1))
-  })
+    var n = $(this).parent().index();
+    tabBtn.parent().eq(n).addClass('on');
+    tabBtn.parent().eq(n).siblings().removeClass('on');
+   
+    tabConMenu.text('tab 구성' + (n+1) );
 
+  // tabMenuFn을 통해 찾아낸 타입 구성을 재설계하여 배치할 수 있는 함수로 만들어서 호출
+    
+    tabMenuSetFn(n);
+
+
+  });
+
+
+  // 객체 형식을 문자로 변환 : JSON.stringfy(객체)
 
 }); // $.ajax()
 
