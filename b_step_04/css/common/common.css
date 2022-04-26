@@ -59,3 +59,15 @@
   margin-bottom : 20px;
   border-bottom:1px solid #aaa;
 }
+
+.code_exam li {
+  height: auto;
+  margin:0; margin-bottom: 10px;
+  padding-bottom: 5px; box-sizing: inherit;
+  border-bottom: 1px solid #ccc;
+}
+.part a {
+  border: none;
+  width:auto; height:auto;
+  color:#555; text-decoration: none;
+}
