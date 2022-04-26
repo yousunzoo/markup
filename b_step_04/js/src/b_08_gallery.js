@@ -1,0 +1,31 @@
+// b_08_gallery.js
+
+(function($){
+//jQuery
+  // 1. 갤러리 영역에 이미지를 변경하게 만들자!
+  // 2. 버튼을 클릭 시 해당 버튼의 순서를 기억 -> 이미지의 순번에 맞는 이미지가 나타나게.
+  // 3. 해당하는 순서에 맞는 구성에 .on을 추가, 이외의 구성은 제거
+
+  // 변수
+  var galleryArea = $('.gallery_area');
+  var galContent = galleryArea.children('.gallery_content');
+  var galImg = galContent.children('img');
+
+  var galList = galleryArea.find('.gallery_list');
+  var galLi = galList.children('li');
+  var galBtn = galLi.children('button');
+
+  // 이벤트(click, prevetDefault, addClass, removeClass, index, eq)
+  galBtn.on('click', function(e){
+  e.preventDefault();
+  var i = $(this).parent().index();
+  console.log(i);
+  galImg.eq(i).addClass('on');
+  galImg.eq(i).siblings().removeClass('on');
+  galLi.eq(i).addClass('on');
+  galLi.eq(i).siblings().removeClass('on');
+
+  });
+
+
+})(jQuery);
