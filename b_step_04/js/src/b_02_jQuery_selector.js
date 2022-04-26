@@ -37,7 +37,7 @@
   // ------------------------------------------
   // 선택자
   var boxP = box.children('p');
-  box.children('ol').addClass('list_wrap');
+  box.children('ol').addClass('list_wrap'); // 메소드체인
   var boxList = box.children('.list_wrap');
 
   boxP.css({'backgroundColor':'#fff', 'marginBottom':10+'px'});
