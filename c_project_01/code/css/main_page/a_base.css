@@ -79,9 +79,12 @@
       line-height: 25px;
       font-size:1rem; color:#171717;
       font-weight: 700;
-      text-transform:capitalize;
-      word-spacing:-5px;
+      /* text-transform:capitalize; */
+      /* word-spacing:-5px; */
     }
+
+    .gnb li::first-letter {text-transform: capitalize;}
+    .gnb li abbr {word-spacing: -5px;}
 
     .first_margin li:first-child { margin-left:0;}
 
@@ -320,14 +323,14 @@ background-color: var(--white); overflow-x: hidden;}
     background-color: #1A5D54;
   }
 
-  .best_card_list {float:right; width:800px; height: 380px; 
+  .best_card_list {float:right; width:800px; height: 380px; padding: 30px;
     overflow: hidden;
   }
 
   .best_card_list ul {  width: 200%; height: 100%; }
   .best_card_list li { 
     float:left; width: 240px; height: 380px; 
-    margin-right:40px; border:1px solid #757575; border-radius:3px; padding:10px;
+    margin-right:40px; margin-bottom:30px; border:1px solid #757575; border-radius:3px; padding:10px;
     box-sizing: border-box;
   }
 
@@ -456,7 +459,7 @@ background-color: var(--white); overflow-x: hidden;}
   width: 100vw;
   padding-top: 68px; box-sizing: border-box;
   background-color: #333; }
-}
+
 .area_foot { height: auto;}
 
 .info_logo{

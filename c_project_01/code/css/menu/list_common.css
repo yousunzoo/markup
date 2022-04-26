@@ -1,17 +1,17 @@
 /* list_common.css */
 
 .code_exam {width: 100%; min-height:500px;  border:0; }
-.card_columns {width: 1090px; height:auto; margin:25px auto;}
-.card_columns ul {width: 100%;height:auto; margin:auto;}
-.card_columns li { 
+.card_area {width: 1090px; height:auto; margin:25px auto;}
+.card_area ul {width: 100%;height:auto; margin:auto;}
+.card_area li { 
   float:left; width: 250px; height: auto; 
   margin-right:30px; margin-bottom:40px; border:1px solid #757575; border-radius:3px; padding:10px;
   box-sizing: border-box;
 }
-.card_columns li:nth-child(4n) {margin-right:0;}
+.card_area li:nth-child(4n) {margin-right:0;}
 
-.card_columns li a {display: block; width: 100%; height: 100%; }
-.card_columns .card_img { 
+.card_area li a {display: block; width: 100%; height: 100%; }
+.card_area .card_img { 
   width: 100%; height: 220px; 
   margin-bottom:10px;
   border-radius:3px; 
@@ -20,20 +20,20 @@
   background-position: 50% 50%;
 }
 
-.card_columns dl {
+.card_area dl {
   width: 100%; height:120px; 
 }
-.card_sub_title {
+.card_title {
   width: 100%; height: 30px;
   margin-bottom: 10px; border-bottom:2px solid var(--deep_gray);
   font-size: 22px; font-weight: 700; text-transform :capitalize; line-height: 30px; color:#171717;
 }
-.card_narr {
+.card_content {
   width: 100%; height: auto; margin-bottom:10px;
   color:#777; font-size:12px;
   line-height:1.5;
 }
-.card_prop {margin-bottom: 20px;}
-.card_prop span {
+.card_option {margin-bottom: 20px;}
+.card_option span {
   padding:3px 5px; border:1px solid var(--light_gray_02); border-radius: 3px;
   font-size: 12px; font-weight:700; color: var(--light_gray_02);}

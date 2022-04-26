@@ -30,7 +30,7 @@
 
   .unb a {
     display:block; width: 100%; height: 100%; 
-    word-spacing: -0.1875rem;
+    word-spacing: -0.1rem;
     text-transform: capitalize; font-size: 0.75rem; color: var(--deep_gray);
     text-align: center;
     }

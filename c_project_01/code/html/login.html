@@ -114,47 +114,62 @@
   </article>
 
   <footer id="footBox">
-    <div class="area_foot max_width_01">
-      <h2 class="info_logo blind_area">
-        <a href="#"><span>오삼 커피 회사 정보</span></a></h2>
+    <div class="max_width_01 area_foot">
+      <h2 class="info_logo"><span class="blind">오삼커피 회사 정보</span></h2>
       <div class="info_company clearfix">
         <div class="company_content">
-          <div class="company_about">
-            <ul>
-              <li><a href="#">이용약관</a></li>
-              <li><a href="#">개인정보처리방침</a></li>
-              <li><a href="#">운영정책</a></li>
-              <li><a href="#">권리침해신고안내</a></li>
-              <li><a href="#">공지사항</a></li>
-              <li><a href="#">contact us</a></li>
-            </ul>
-          </div>
-          <div class="company_address">
-            <p>서울특별시 강남구 논현동 000 MEGA빌딩 (서울특별시 강남구 논현동 000-00)</p>
-            <p>Tel : 02-0000-0000  |  fax : 02-0000-0001 </p>
-            <p>사업자등록번호 : 100-00-00000  | 통신판매업 신고 : 강남 제 000000호  | </p>
-            <p>대표이사 : 000</p>
-          </div>
-          <div class="copyright">
-            <p>&#169; coffinx Corp. All rights reserved.</p>
-          </div>
-        </div>
+          <h3 class="blind">info_company</h3>
+          <ul class="list_corp">
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">운영정책</a></li>
+            <li><a href="#">권리침해신고안내</a></li>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+
+          <address>
+            <p class="building">서울특별시 강남구 논현동 000 MEGA빌딩 (서울특별시 강남구 논현동 000-00)</p>
+            <dl class="clearfix">
+              <dt>tel</dt>
+              <dd>02-0000-0000</dd>
+              <dt>fax</dt>
+              <dd>02-0000-0001</dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>사업자등록번호</dt>
+              <dd>100-00-00000</dd>
+              <dt>통신판매업 신고</dt>
+              <dd>강남 제 000000호</dd>
+              <dt>대표이사</dt>
+              <dd>000</dd>
+            </dl>
+            <p class="copyright">© coffinx Corp. All rights reserved.</p>
+          </address>
+        </div><!-- // .company_content -->
+
         <div class="social_family">
-          <div class="family_btn blind_area">
-            <ul class="clearfix last_margin">
-              <li><a href="#"><span>facebook</span></a></li>
-              <li><a href="#"><span>youtube</span></a></li>
-              <li><a href="#"><span>naver blog</span></a></li>
+          <h3 class="blind">social list and family site</h3>
+          <div class="social">
+            <ul class="last_margin blind_area">
+              <li><a href="#"><span>sns_01</span></a></li>
+              <li><a href="#"><span>sns_02</span></a></li>
+              <li><a href="#"><span>sns_03</span></a></li>
             </ul>
+          </div>              
+          <div class="family_site clearfix">
+            <h3>family site</h3>
+            <label for="site" class="blind">family site</label>
+            <select name="" id="site">
+              <option value="#">site_01</option>
+              <option value="#">site_02</option>
+              <option value="#">site_03</option>
+            </select>
           </div>
-        
-        <div class="family_box">
-          <div class="family_01"><h3>family site</h3></div>
-          <div class="family_02"></div>
-        </div>
+          <div class="authentication"></div>
+        </div><!-- // .social_family -->
       </div>
-      </div>
-    </div> <!-- area_foot -->
+    </div>
   </footer> <!-- // footBox -->
 </div> <!-- // #wrap -->
 </body>
