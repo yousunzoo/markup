@@ -11,7 +11,7 @@ var view =  btnArea.find('.view')
 var fade =  btnArea.find('.fade')
 var slide =  btnArea.find('.slide')
 var classSet =  btnArea.find('.class_set')
-var timed = 300;
+var timed = 600;
 
 // galleryImg.css({'display':'block'});
 // --------------------------------------
