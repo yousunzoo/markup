@@ -1,0 +1,20 @@
+/* b_06_slide_horizontal_swipe.css */
+
+.code_exam {width: 1300px; height: 3000px;}
+.ex_wrap {position: relative;}
+h3 {text-align: center; margin-bottom: 20px;}
+
+/* ----------------------------------------------- */
+.slide {
+  --slide-len : 5;
+  overflow : hidden;
+  width: 800px; height: 450px; margin: auto; background-color: #fff;}
+  
+  .horizontal_slide {position: relative; width:500%; width: calc(100% * var(--slide-len)); height:100%;}
+  .horizontal_slide > div {float:left; width:20%; width: calc(100% / var(--slide-len)); height:450px;} /* 부모값 기준으로 % 재설정 */
+  /* ------------------------------------------------------------------------- */
+.slide_con_01 { background-color: #2C56ED77; }
+.slide_con_02 { background-color: #29192677; }
+.slide_con_03 { background-color: #DFAB1177; }
+.slide_con_04 { background-color: #E497C777; }
+.slide_con_05 { background-color: #65862377; }

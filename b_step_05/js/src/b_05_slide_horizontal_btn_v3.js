@@ -81,8 +81,10 @@ var slideStopFn = function(){
 // 기능 수행(수행 및 체크)
 var cloneDiv = horizontalDiv.eq(-1).clone();
 horizontal.prepend(cloneDiv);
+
 var newHorizontalDiv = horizontal.children('div');
 var newDivLen = newHorizontalDiv.length;
+
 horizontal.css({width:(100 * newDivLen)+'%', left:-100+'%'});
 newHorizontalDiv.css({width:(100/newDivLen)+'%'})
 
