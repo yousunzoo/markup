@@ -1,0 +1,122 @@
+[
+ {
+   "id": 1,
+   "title": "gift name 01",
+   "image": "gift_01.png",
+   "image_alt": "이미지 01에 대한 설명",
+   "content": "2줄정도에 해당하는 상품에 대한 설명",
+   "link_detail": "./data_detail/gift_01.html",
+   "link_basket": "#",
+   "link_buy": "#"
+ },
+ {
+   "id": 2,
+   "title": "gift name 02",
+   "image": "gift_02.png",
+   "image_alt": "이미지 02에 대한 설명",
+   "content": "2줄정도에 해당하는 상품에 대한 설명",
+   "link_detail": "./data_detail/gift_02.html",
+   "link_basket": "#",
+   "link_buy": "#"
+ },
+ {
+   "id": 3,
+   "title": "gift name 03",
+   "image": "gift_03.png",
+   "image_alt": "이미지 03에 대한 설명",
+   "content": "2줄정도에 해당하는 상품에 대한 설명",
+   "link_detail": "./data_detail/gift_03.html",
+   "link_basket": "#",
+   "link_buy": "#"
+ },
+ {
+   "id": 4,
+   "title": "gift name 04",
+   "image": "gift_04.png",
+   "image_alt": "이미지 04에 대한 설명",
+   "content": "2줄정도에 해당하는 상품에 대한 설명",
+   "link_detail": "./data_detail/gift_04.html",
+   "link_basket": "#",
+   "link_buy": "#"
+ },
+ {
+   "id": 5,
+   "title": "gift name 05",
+   "image": "gift_05.png",
+   "image_alt": "이미지 05에 대한 설명",
+   "content": "2줄정도에 해당하는 상품에 대한 설명",
+   "link_detail": "./data_detail/gift_05.html",
+   "link_basket": "#",
+   "link_buy": "#"
+ },
+ {
+   "id": 6,
+   "title": "gift name 06",
+   "image": "gift_06.png",
+   "image_alt": "이미지 06에 대한 설명",
+   "content": "2줄정도에 해당하는 상품에 대한 설명",
+   "link_detail": "./data_detail/gift_06.html",
+   "link_basket": "#",
+   "link_buy": "#"
+ },
+ {
+   "id": 7,
+   "title": "gift name 07",
+   "image": "gift_07.png",
+   "image_alt": "이미지 07에 대한 설명",
+   "content": "2줄정도에 해당하는 상품에 대한 설명",
+   "link_detail": "./data_detail/gift_07.html",
+   "link_basket": "#",
+   "link_buy": "#"
+ },
+ {
+   "id": 8,
+   "title": "gift name 08",
+   "image": "gift_08.png",
+   "image_alt": "이미지 08에 대한 설명",
+   "content": "2줄정도에 해당하는 상품에 대한 설명",
+   "link_detail": "./data_detail/gift_08.html",
+   "link_basket": "#",
+   "link_buy": "#"
+ },
+ {
+   "id": 9,
+   "title": "gift name 09",
+   "image": "gift_09.png",
+   "image_alt": "이미지 09에 대한 설명",
+   "content": "2줄정도에 해당하는 상품에 대한 설명",
+   "link_detail": "./data_detail/gift_09.html",
+   "link_basket": "#",
+   "link_buy": "#"
+ },
+ {
+   "id": 10,
+   "title": "gift name 10",
+   "image": "gift_10.png",
+   "image_alt": "이미지 10에 대한 설명",
+   "content": "2줄정도에 해당하는 상품에 대한 설명",
+   "link_detail": "./data_detail/gift_10.html",
+   "link_basket": "#",
+   "link_buy": "#"
+ },
+ {
+   "id": 11,
+   "title": "gift name 11",
+   "image": "gift_11.png",
+   "image_alt": "이미지 11에 대한 설명",
+   "content": "2줄정도에 해당하는 상품에 대한 설명",
+   "link_detail": "./data_detail/gift_11.html",
+   "link_basket": "#",
+   "link_buy": "#"
+ },
+ {
+   "id": 12,
+   "title": "gift name 12",
+   "image": "gift_12.png",
+   "image_alt": "이미지 12에 대한 설명",
+   "content": "2줄정도에 해당하는 상품에 대한 설명",
+   "link_detail": "./data_detail/gift_12.html",
+   "link_basket": "#",
+   "link_buy": "#"
+ }
+]

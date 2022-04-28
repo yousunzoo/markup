@@ -1,0 +1,176 @@
+/* c_gift.css */
+
+#giftBox {
+  width: 100%; height: auto;
+  padding-top:100px;
+}
+
+/* --------------------------------------------------------- */
+.banner {
+  width: 100%; height: 250px;
+  background-image: url("../../img/gift_page/banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.banner_inner {
+  width: 80%; height:auto;
+  margin:auto;
+  color:var(--white);
+  padding-top:90px;
+}
+
+.banner_inner > h2 {margin-bottom:20px; font-size: var(--title_02); text-transform: capitalize;}
+
+.banner_inner > p { font-size: var(--content_02); line-height: 24px;}
+
+/* --------------------------------------------------------- */
+.slide_area {
+  position: relative;
+  width: 1100px; height: auto;
+  padding-top:100px; margin:auto;
+}
+
+.slide_btn {
+  position:absolute;
+  width: 100%; height:0; top:0; bottom:0; margin:auto;
+}
+
+.slide_btn button {
+  width: 70px; height: 70px;
+  font-size:60px; color : var(--light_gray_02); border-radius: 50px; box-sizing: border-box;
+}
+
+.next {float:right;}
+.prev {float:left;}
+
+.slide_btn button:hover {color:var(--primary_01)}
+.slide_btn button:focus {border:3px solid var(--primary_02);}
+
+/* -------------------------------------------------------- */
+
+.slide_list {
+  width: 850px; height: auto; margin:auto; margin-bottom : 100px;
+}
+
+.slide_list dl {
+  float:left;
+  margin-right:40px;
+  width: 240px; height: 350px;
+  border-radius: 3px;
+  color : var(--white);
+  text-align: right; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.slide_list dl:nth-child(1) {background-image: url("../../img/gift_page/slide_list/slide_01.png");}
+.slide_list dl:nth-child(2) {background-image: url("../../img/gift_page/slide_list/slide_02.png");}
+.slide_list dl:nth-child(3) {background-image: url("../../img/gift_page/slide_list/slide_03.png");}
+
+.slide_list dl:last-child {margin-right:0;}
+.slide_list dl.on {
+  width: 290px; height: 420px; padding-top:0;
+}
+
+.slide_list dl.on dt {padding-top :260px;}
+.slide_list dt {
+  width: 85%; height: auto;
+  padding-top:190px; margin:auto; margin-bottom:10px;
+  text-transform: capitalize;
+  font-size : var(--content_01); font-weight: 700;
+}
+
+.slide_narr {
+  width: 80%; height: auto;
+  padding-top:10px; margin:auto; margin-bottom: 20px;
+  border-top:1px solid var(--white);
+  font-size : var(--content_04);
+  line-height:16px;
+}
+
+.slide_link a {
+  display: block;
+  width: 85%; height:40px;
+  margin:auto;
+  background-color: var(--white);
+  border : 1px solid var(--light_gray_03);
+  border-radius: 3px;
+  text-align: center; font-size:var(--content_04);
+  color : var(--black_01); line-height:40px;
+}
+
+/* ---------------------------------------------------------- */
+.card_area {
+  width: 1100px; height: auto; 
+  margin:auto;
+  border-top : 1px solid var(--light_gray_03);
+}
+
+.card_list {
+  width: 100%; height: auto;
+  padding-top:50px; padding-bottom:200px;
+  background-color: #fff;
+}
+
+.gift_card {
+  float:left;
+  width: 240px; height: 360px; 
+  margin: 30px 15px;
+  padding-top:10px; box-sizing: border-box;
+  border : 1px solid var(--light_gray_03);
+  border-radius: 5px;
+}
+
+.img_space {
+  width: 218px; height: 180px;
+  margin:auto; margin-bottom: 10px;
+  border-radius: 3px;
+  border : 1px solid #aaa;
+}
+
+.gift_card dl {
+  width: 218px; height:auto; margin:auto;
+}
+
+.gift_card dt {
+  margin-bottom:10px;
+  border-bottom : 1px solid var(--light_gray_03);
+  font-size: var(--content_01); font-weight: 700; text-transform: capitalize;
+}
+
+.data_con {
+  margin-bottom:10px;
+  font-size : var(--content_04); line-height: 18px;
+}
+
+.link_detail a {
+  display: block;
+  width: 100%; height: 25px;
+  margin-bottom:8px;
+  border : 1px solid var(--light_gray_03); box-sizing: border-box;
+  border-radius: 3px;
+  font-size: var(--content_04); line-height: 25px; text-align: center;
+}
+
+.link_shopping {
+  width: 100%; height: 30px;
+}
+.link_shopping a {
+  display: block; border-radius: 3px;
+  line-height: 30px; text-align: center; font-size: var(--content_04);
+}
+.basket {
+  float:left;
+  width: 80px; 
+  background-color: var(--yellow_01);
+  color:var(--black_01);
+}
+
+.buy {
+  float:right;
+  width: 125px;
+  background-color: var(--primary_01);
+  color:var(--white);
+}
