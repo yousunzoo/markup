@@ -14,7 +14,7 @@ body {margin:0; line-height:100%;
     vertical-align: baseline;
   }
 
-ul,ol {list-style: none;}
+li, ul,ol {list-style: none;}
 
 hr {
   margin:0; border:0;
