@@ -20,18 +20,12 @@
 .banner_inner {
   width: 80%; height: auto;
   margin:auto;
-  padding-top:100px;
+  padding-top:100px; color:var(--white);
 }
 
-.banner_inner > h2 {
-  font-size:40px; text-transform: capitalize;
-  color:var(--white); margin-bottom:10px;
-}
+.banner_inner > h2 {margin-bottom:10px; font-size:40px; text-transform: capitalize;}
 
-.banner_inner > p {
-  font-size:18px;
-  color:var(--white); line-height: 24px;
-}
+.banner_inner > p { font-size:18px; line-height: 24px;}
 
 /* --------------------------------------------------------------------- */
 .modal_list {
