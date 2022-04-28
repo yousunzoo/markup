@@ -2,9 +2,13 @@
 
 #wrap {width: 100%; height: auto; background-color: #fff;}
 
-.menu_banner {width: 100%; height: 300px; margin-bottom:150px;
-background-color:rgb(210, 253, 253);}
-.menu_inner {width: 70%; height: 80%; margin: auto; padding-top:120px; box-sizing: border-box; }
+.menu_banner {width: 100%; height: 300px; padding-top:100px; margin-bottom:150px;
+background-image: url("../../img/menu_page/title.png");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: 50% 50%;}
+
+.menu_inner {width: 70%; height: 80%; margin: auto; padding-top:100px; box-sizing: border-box; }
 .menu_inner h2 {font-size:40px; font-weight: 700; text-transform: capitalize; color:var(--primary_02);
 margin-bottom:30px; }
 .menu_inner p {font-weight: 500; color:var(--light_gray_03)}
