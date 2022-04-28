@@ -1,0 +1,74 @@
+/* c_faqbox.css */
+
+#faqBox {width: 100%; height: 1460px;
+background-image: url("../../img/faq_page/contentBox.png");
+background-size: cover;
+background-position: 50% 50%;
+background-repeat: no-repeat;}
+
+.faq_title {width: 100%; height: 250px;
+background-image: url("../../img/faq_page/title.png");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: 50% 50%;}
+
+.faq_title > h2 {
+  display: block; 
+  width: 80%; height: auto;
+  padding: 60px; box-sizing:border-box;  margin:auto;
+  font-size: 40px; color:var(--primary_02); text-align: left; line-height: 60px;
+}
+
+/* ------------------------------------------------------------------- */
+
+.accor {width: 940px; height:900px; 
+  margin:auto; padding-top:200px;
+}
+
+.accor dl.on {
+  box-shadow: 3px 3px 5px var(--deep_gray);
+}
+.accor dt {
+  width: 100%; height: auto;
+  margin:10px auto;
+  padding : 25px; box-sizing: border-box;
+  border-radius: 5px;
+  background-color: var(--white_03);
+
+}
+.accor > dl:nth-of-type(1) dt{margin-top: 0;}
+
+.accor button {
+  position: relative;
+  width: 100%; height: auto;
+  text-align: left;
+  text-transform: capitalize;
+  color : (--deep_gray);
+  font-size: 22px; font-weight:700;
+}
+
+.accor i.fa-circle {
+  margin-right:20px;
+  font-size:12px; 
+  color : var(--primary_01);
+}
+.accor i.fa-circle-arrow-down {
+  position:absolute;
+  display:block;
+  font-size: 24px;
+  top:0; bottom:0; right:0;
+  margin:auto;
+}
+.accor dd {
+  display: none;
+  width: 98%; height:auto;
+  padding: 40px 0; margin:auto; margin-bottom:20px;
+  border-top : 2px solid #555; 
+  font-size : 18px; color : var(--light_gray_03);
+  line-height:30px;
+}
+.accor dd:last-of-type {border:0;}
+.accor dl i{transition:all 500ms linear}
+.accor dl.on i {
+  transform : rotate(180deg)
+}
