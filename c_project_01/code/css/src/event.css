@@ -1,0 +1,8 @@
+/* event.css */
+
+@import url("../common/variable.css");
+@import url("./../page/a_wrap.css");
+
+@import url("./../page/b_headbox.css");
+@import url("./../page/c_eventbox.css");
+@import url("./../page/b_footbox.css");

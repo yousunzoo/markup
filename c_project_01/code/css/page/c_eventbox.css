@@ -1,0 +1,34 @@
+/* c_eventbox.css */
+
+#eventBox {
+  width: 100%; height: 2100px; 
+  background-image: url("../../img/event_page/contentBox.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  }
+
+.event_banner {
+  width: 100%; height: 250px;
+  padding-top:80px;
+  background-image: url("../../img/event_page/title.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.banner_inner {
+  width: 80%; height: auto;
+  margin:auto;
+  padding-top:100px;
+}
+
+.banner_inner > h2 {
+  font-size:40px; text-transform: capitalize;
+  color:var(--white); margin-bottom:10px;
+}
+
+.banner_inner > p {
+  font-size:18px;
+  color:var(--white); line-height: 24px;
+}
