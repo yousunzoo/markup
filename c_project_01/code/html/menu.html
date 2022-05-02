@@ -48,7 +48,7 @@
     <header id="headBox">
       <div class="area_head">
       <h1 id="logo" class="blind_area">
-        <a href="./main_04.html" title="osam coffee">
+        <a href="../index.html" title="osam coffee">
           <span>osam</span>
         </a>
       </h1>
@@ -83,25 +83,36 @@
 
     <article id="menuBox" class="clearfix">
       <div class="menu_banner">
-      <div class="menu_inner">
-      <h2 class="product">product menu</h2>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias neque obcaecati autem ab cupiditate voluptates ad ex qui saepe quod, beatae odit debitis perspiciatis voluptatum veniam labore! Reiciendis, quaerat. Reiciendis.</p>
-      </div>
-      </div>
+        <div class="menu_inner">
+          <h2 class="product">product menu</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias neque obcaecati autem ab cupiditate voluptates ad ex qui saepe quod, beatae odit debitis perspiciatis voluptatum veniam labore! Reiciendis, quaerat. Reiciendis.</p>
+        </div>
+      </div> <!-- .menu_banner -->
 
-      <div class="menu_box">
-        <div class="btns_area">
-          <button type="button"><span>coffee</span></button>
-          <button type="button"><span>tea</span></button>
-          <button type="button"><span>beverage</span></button>
-          <button type="button"><span>dessert</span></button>
-          <button type="button"><span>theme</span></button>
-        </div> <!-- .btns_area -->
+      <div class="tab_box">
+        <div class="tab_title">
+          <ul class="clearfix">
+          <li><button type="button">1</button></li>
+          <li><button type="button">2</button></li>
+          <li><button type="button">3</button></li>
+          <li><button type="button">4</button></li>
+          <li><button type="button">5</button></li>
+          </ul>
+        </div> <!-- .tab_title -->
+
         <div class="card_area">
-        <ul class="card_list clearfix">
-        </ul>
-       </div> <!-- .card_area -->
-    </div> <!-- .menu_box -->
+          <ul class="card_list clearfix">
+            <li>
+              <div class="card_img"></div>
+              <dl>
+              <dt class="card_title"></dt>
+              <dd class="card_content"></dd>
+              <dd class="card_option"><!--span 태그 들어갈 예정 --></dd>
+              </dl>
+            </li>
+          </ul> <!-- .card_list -->
+        </div> <!-- .card_area -->  
+      </div> <!-- .tab_box -->
     </article> <!-- // #menuBox-->
 
     <footer id="footBox">
@@ -162,18 +173,14 @@
         </div>
       </div>
     </footer> <!-- // footBox -->
-  </div> <!-- wrap -->
+  </div> <!-- ex_wrap -->
 
 
   <!-- javascript -->  
   <script src="../ie/modernizr-custom.js"></script>
   <script src="../js/common/jquery-3.6.0.min.js"></script>
   <script src="../js/common/jquery-ui.min.js"></script>
-  <script src="../js/src/menu_btns.js"></script>
-  <script src="../js/src/menu_cardList.js"></script>
-</body>
-</html>
+  <script src="../js/src/menu.js"></script>
 
-  <!-- javascript -->  
 </body>
 </html>

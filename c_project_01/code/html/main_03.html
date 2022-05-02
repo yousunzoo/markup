@@ -3,14 +3,21 @@
 <html lang="ko-KR">
   <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../fonts/fontawesome5/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../fonts/fontawesome/css/all.min.css">
     
     <link rel="stylesheet" href="../css/common/reset.css">
-    <link rel="stylesheet" href="../css/common/common.css">    
+    <link rel="stylesheet" href="../css/common/common.css"> 
     <link rel="stylesheet" href="../css/src/main_03.css">
+    
+    <link rel="apple-touch-icon" href="../favicon.png">
+    <link rel="shortcut icon" href="../favicon.png" type="image/png">
+    <script src="../ie/modernizr-custom.js"></script>
     <title>웹기초</title>
   </head>
   <body>
@@ -30,7 +37,7 @@
               <ul class="clearfix">
                 <li><a href="#">한국어</a></li>
                 <li><a href="./login.html">log in</a></li>
-                <li><a href="#">join</a></li>
+                <li><a href="./join.html">join</a></li>
                 <li><a href="#">site map</a></li>
               </ul>
             </div>
@@ -38,14 +45,14 @@
               <h3 class="blind">페이지 전체 네비게이션</h3>
               <ul class="clearfix">
                 <li><a href="#">about us</a></li>
-                <li><a href="#">menu</a></li>
-                <li><a href="#">gift</a></li>
+                <li><a href="./menu.html">menu</a></li>
+                <li><a href="./gift.html">gift</a></li>
                 <li>
-                  <a href="#">
+                  <a href="./faq.html">
                     <abbr title="Frequently Asked Questions">F A Q</abbr>
                   </a>
                 </li>
-                <li><a href="#">event</a></li>
+                <li><a href="./event.html">event</a></li>
                 <li><a href="#">notice</a></li>
               </ul>
             </div>
@@ -87,20 +94,31 @@
         <div class="area_indicator">
           <!-- area_indicator -->
         <ul class="blind_area">
-          <li class="act"><a href="#"><span>최신 첫번째 내용</span></a></li>
-          <li><a href="#"><span>최신 두번째 내용</span></a></li>
-          <li><a href="#"><span>최신 세번째 내용</span></a></li>
+          <li class="act"><a href="#newT_01"><span>최신 첫번째 내용</span></a></li>
+          <li><a href="#newT_02"><span>최신 두번째 내용</span></a></li>
+          <li><a href="#newT_03"><span>최신 세번째 내용</span></a></li>
         </ul>
         </div>
         
-        <div class="area_content first_margin blind_area">
-          <!-- area_content -->
-          <ul>
-            <li><a href="#"><span>card_01</span></a></li>
-            <li><a href="#"><span>card_02</span></a></li>
-            <li><a href="#"><span>card_03</span></a></li>
+        <div class="new_content first_margin blind_area">
+          <div class="new_wrapper horizontal_slide">
+          <ul id="newT_01" class="new_slide_01">
+            <li><a href="#" class="new_con_01"><span>card_01</span></a></li>
+            <li><a href="#" class="new_con_02"><span>card_02</span></a></li>
+            <li><a href="#" class="new_con_03"><span>card_03</span></a></li>
+          </ul>
+          <ul id="newT_02" class="new_slide_02">
+            <li><a href="#" class="new_con_04"><span>card_04</span></a></li>
+            <li><a href="#" class="new_con_05"><span>card_05</span></a></li>
+            <li><a href="#" class="new_con_06"><span>card_06</span></a></li>
+          </ul>
+          <ul id="newT_03" class="new_slide_03">
+            <li><a href="#" class="new_con_07"><span>card_07</span></a></li>
+            <li><a href="#" class="new_con_08"><span>card_08</span></a></li>
+            <li><a href="#" class="new_con_09"><span>card_09</span></a></li>
           </ul>
         </div>
+        </div> <!-- area_content -->
  
       </article><!-- // #newBox -->
       
@@ -128,11 +146,11 @@
               <h2>인기 메뉴 리스트</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, nisi.</p>
               <div class="best_btn blind_area">
-                <button type="button">
+                <button type="button" class="next">
                   <i class="fas fa-chevron-right"></i>
                   <span>next</span>
                 </button>
-                <button type="button">
+                <button type="button" class="prev">
                   <i class="fas fa-chevron-left"></i>
                   <span>prev</span>
                 </button>
@@ -143,10 +161,10 @@
             </div>
             
             <div class="best_card_list first_margin">
-              <ul>
+              <ul class="slide_wrapper horizontal_slide clearfix">
                 <li>
                   <a href="#">
-                    <div class="card_img"> <!-- 카드이미지 --> </div>
+                    <div class="best_img_01"> <!-- 카드이미지 --> </div>
                     <dl>
                       <dt class="card_sub_title">God father</dt>
                       <dd class="card_narr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium nihil </dd>
@@ -157,7 +175,7 @@
                 
                 <li>
                   <a href="#">
-                    <div class="card_img"> <!-- 카드이미지 --> </div>
+                    <div class="best_img_02"> <!-- 카드이미지 --> </div>
                     <dl>
                       <dt class="card_sub_title">God father</dt>
                       <dd class="card_narr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium nihil </dd>
@@ -168,7 +186,7 @@
                 
                 <li>
                   <a href="#">
-                    <div class="card_img"> <!-- 카드이미지 --> </div>
+                    <div class="best_img_03"> <!-- 카드이미지 --> </div>
                     <dl>
                       <dt class="card_sub_title">God father</dt>
                       <dd class="card_narr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium nihil </dd>
@@ -179,7 +197,7 @@
                 
                 <li>
                   <a href="#">
-                    <div class="card_img"> <!-- 카드이미지 --> </div>
+                    <div class="best_img_04"> <!-- 카드이미지 --> </div>
                     <dl>
                       <dt class="card_sub_title">God father</dt>
                       <dd class="card_narr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium nihil </dd>
@@ -190,7 +208,7 @@
                 
                 <li>
                   <a href="#">
-                    <div class="card_img"> <!-- 카드이미지 --> </div>
+                    <div class="best_img_05"> <!-- 카드이미지 --> </div>
                     <dl>
                       <dt class="card_sub_title">God father</dt>
                       <dd class="card_narr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium nihil </dd>
@@ -201,7 +219,7 @@
                 
                 <li>
                   <a href="#">
-                    <div class="card_img"> <!-- 카드이미지 --> </div>
+                    <div class="best_img_06"> <!-- 카드이미지 --> </div>
                     <dl>
                       <dt class="card_sub_title">God father</dt>
                       <dd class="card_narr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium nihil </dd>
@@ -234,18 +252,18 @@
         <h2 class="blind">후원사</h2>
         <div class="max_width_01 sponsor_area blind_area">
           <!-- sponsor_area -->
-          <ul>
-            <li><a href="#"><span>후원사_01</span></a></li>
-            <li><a href="#"><span>후원사_02</span></a></li>
-            <li><a href="#"><span>후원사_03</span></a></li>
-            <li><a href="#"><span>후원사_04</span></a></li>
-            <li><a href="#"><span>후원사_05</span></a></li>
-            <li><a href="#"><span>후원사_06</span></a></li>
-            <li><a href="#"><span>후원사_07</span></a></li>
-            <li><a href="#"><span>후원사_08</span></a></li>
-            <li><a href="#"><span>후원사_09</span></a></li>
-            <li><a href="#"><span>후원사_10</span></a></li>
-            <li><a href="#"><span>후원사_11</span></a></li>
+          <ul class="horizontal_slide">
+            <li class="spon_01"><a href="#"><span>후원사_01</span></a></li>
+            <li class="spon_02"><a href="#"><span>후원사_02</span></a></li>
+            <li class="spon_03"><a href="#"><span>후원사_03</span></a></li>
+            <li class="spon_04"><a href="#"><span>후원사_04</span></a></li>
+            <li class="spon_05"><a href="#"><span>후원사_05</span></a></li>
+            <li class="spon_06"><a href="#"><span>후원사_06</span></a></li>
+            <li class="spon_07"><a href="#"><span>후원사_07</span></a></li>
+            <li class="spon_08"><a href="#"><span>후원사_08</span></a></li>
+            <li class="spon_09"><a href="#"><span>후원사_09</span></a></li>
+            <li class="spon_10"><a href="#"><span>후원사_10</span></a></li>
+            <li class="spon_11"><a href="#"><span>후원사_11</span></a></li>
           </ul>
         </div>
       </aside><!-- // #sponsorBox -->
@@ -264,9 +282,9 @@
                 <li><a href="#">공지사항</a></li>
                 <li><a href="#">Contact Us</a></li>
               </ul>
-
+    
               <address>
-                <p>서울특별시 강남구 논현동 000 MEGA빌딩 (서울특별시 강남구 논현동 000-00)</p>
+                <p class="building">서울특별시 강남구 논현동 000 MEGA빌딩 (서울특별시 강남구 논현동 000-00)</p>
                 <dl class="clearfix">
                   <dt>tel</dt>
                   <dd>02-0000-0000</dd>
@@ -281,20 +299,21 @@
                   <dt>대표이사</dt>
                   <dd>000</dd>
                 </dl>
-                <p>© coffinx Corp. All rights reserved.</p>
+                <p class="copyright">© coffinx Corp. All rights reserved.</p>
               </address>
             </div><!-- // .company_content -->
-
+    
             <div class="social_family">
               <h3 class="blind">social list and family site</h3>
               <div class="social">
-                <ul>
-                  <li><a href="#">sns_01</a></li>
-                  <li><a href="#">sns_02</a></li>
-                  <li><a href="#">sns_03</a></li>
+                <ul class="last_margin blind_area">
+                  <li><a href="#"><span>sns_01</span></a></li>
+                  <li><a href="#"><span>sns_02</span></a></li>
+                  <li><a href="#"><span>sns_03</span></a></li>
                 </ul>
               </div>              
-              <div class="family_site">
+              <div class="family_site clearfix">
+                <h3>family site</h3>
                 <label for="site" class="blind">family site</label>
                 <select name="" id="site">
                   <option value="#">site_01</option>
@@ -306,7 +325,16 @@
             </div><!-- // .social_family -->
           </div>
         </div>
-      </footer><!-- // #footBox -->
+      </footer> <!-- // footBox -->
     </div><!-- // #wrap -->
+
+  <!-- javascript -->  
+  <script src="../ie/modernizr-custom.js"></script>
+  <script src="../js/common/jquery-3.6.0.min.js"></script>
+  <script src="../js/common/jquery-ui.min.js"></script>
+  <script src="../js/src/main_03_newBox.js"></script>
+  <script src="../js/src/main_03_bestBox.js"></script>
+  <script src="../js/src/main_03_sponsorBox.js"></script>
+
   </body>
 </html>
