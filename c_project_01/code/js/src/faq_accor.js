@@ -17,6 +17,7 @@ var accor = $('.accor');
 var accorDl = accor.children('dl');
 var accorDt = accorDl.children('dt');
 var accorDd = accorDl.children('dd');
+var titleColor = accorDt.css('backgroundColor');
 
 // 이벤트 기능
 accorDt.on('click', function(e){
@@ -28,20 +29,22 @@ var dlI = accorDl.eq(i);
 console.log(i);
 
 if( dlI.hasClass('on') ){
-  console.log('true');
+  // console.log(true);
   dlI.removeClass('on');
   dlI.find('dd').stop().slideUp();
-  dlI.stop().animate({'backgroundColor':'none'});
-  _this.css({'backgroundColor':'var(--white_03)'})
+  dlI.stop().animate({'backgroundColor':'transparent'});
+  _this.animate({'backgroundColor': titleColor}, function(){
+    _this.removeAttr('style');
+  });
 } else {
-  console.log('false');
+  // console.log(false);
   dlI.addClass('on');
   dlI.siblings().removeClass('on');
 
   _this.nextAll(accorDd).stop().slideDown();
   dlI.siblings().find('dd').stop().slideUp();
-  dlI.stop().animate({'backgroundColor':'var(--white)', 'borderRadius':5+'px'});
-  _this.stop().animate({'backgroundColor':'var(--white)'});
+  dlI.css({'backgroundColor':'var(--white)', 'borderRadius':5+'px', 'transition':'all 600ms ease'});
+  _this.css({'backgroundColor':'var(--white)', 'transition':'all 600ms ease'});
 
 } // if
 
