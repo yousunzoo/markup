@@ -15,8 +15,8 @@
 
   #logo {float:left; width: 7.5rem; height: 4.375rem;}
     #logo a {
-      background-image: url("../../img/headBox/osam_logo.png");
-      background-image: url("../../img/headBox/osam_logo.svg");
+      background-image: url("../../img/main_page/a_headBox/osam_logo.png");
+      background-image: url("../../img/main_page/a_headBox/osam_logo.svg");
       background-repeat: no-repeat;
       background-position: 50% 50%;
       background-size: contain;
