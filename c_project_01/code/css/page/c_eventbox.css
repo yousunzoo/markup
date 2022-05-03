@@ -50,30 +50,31 @@
 .modal_list li:nth-child(6) {background-image: url("../../img/event_page/content_06.png");}
 
 
-.modal_list li > i.fa-circle-check {
+.modal_list li i.fa-circle-check {
   position: absolute; top:30px; right:30px;
   font-size: 40px; color:var(--white);
 }
 
-.modal_list li > i.fa-circle {
+.modal_list li i.fa-circle {
   position:absolute; top:70px; left:30px;
   font-size:12px; color:var(--white);
   text-shadow: 3px 3px 4px var(--black_01);
 }
-.modal_list li button {
+.modal_list li a {
+  display: block;
   width:100%; height:auto;
   font-weight: 700; color:var(--white);
   text-align: left;
-  padding : 55px 60px; box-sizing: border-box;
+  padding : 50px 60px; box-sizing: border-box;
 }
 
-.modal_list button > h3 {
+.modal_list a > h3 {
   font-size: var(--title_02);
   text-shadow: 3px 3px 4px var(--black_01);
   text-transform: capitalize;
 }
 
-.modal_list button > p {
+.modal_list a > p {
   margin-top:20px;
   font-size: var(--title_05);
   text-shadow: none;
@@ -138,7 +139,7 @@
 }
 
 .modal_content i {
-  position:absolute; top:40px; left:20px;
+  position:absolute; top:38px; left:20px;
   font-size: 16px;
   color : var(--primary_01);
 }
@@ -155,7 +156,6 @@
   width: 94%; height: 360px;
   margin : auto; margin-bottom:20px;
   border-radius: 30px;
-  background-image: url("../../img/event_page/content_01.png");
   background-repeat:no-repeat;
   background-position: 50% 50%;
   background-size: cover;

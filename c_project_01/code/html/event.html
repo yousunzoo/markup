@@ -17,7 +17,7 @@
 
   <link rel="apple-touch-icon" href="../favicon.png">
   <link rel="shortcut icon" href="../favicon.png" type="image/png">
-  <script src="../ie/modernizr-custom.js"></script>
+  <script defer src="../ie/modernizr-custom.js"></script>
   <title>event</title>
 </head>
 <body>
@@ -70,58 +70,82 @@
 
     <div class="modal_list">
       <ul>
-        <li data-img=content_01.png" data-title="summer flaver_01" data-narr="modal_01:이미지 설명">
-          <i class="fa-solid fa-circle"></i>
-          <i class="fa-solid fa-circle-check"></i>
-          <button type="button">
+        <li data-img="content_01.png" data-title="summer flaver_01" data-narr="modal_01:이미지 설명">
+          <div>
+            <i class="fa-solid fa-circle"></i>
+            <a href="#">
             <h3>summer flaver_01</h3>
             <p>2022. 01. 05 - 2022. 02. 15</p>
-          </button>
+            </a>
+          </div>
+          <div>
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
           <div class="bg_shadow"></div>
         </li>
         <li data-img="content_02.png" data-title="summer flaver_02" data-narr="summer flaver_02:이미지 설명">
-          <i class="fa-solid fa-circle"></i>
-          <i class="fa-solid fa-circle-check"></i>
-          <button type="button">
+          <div>
+            <i class="fa-solid fa-circle"></i>
+            <a href="#">
             <h3>summer flaver_02</h3>
             <p>2021. 09. 15 - 2021. 10. 01</p>
-          </button>
+            </a>
+          </div>
+          <div>
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
           <div class="bg_shadow"></div>
         </li>
         <li data-img="content_03.png" data-title="summer flaver_03"  data-narr="summer flaver_03:이미지 설명">
-          <i class="fa-solid fa-circle"></i>
-          <i class="fa-solid fa-circle-check"></i>
-          <button type="button">
+          <div>
+            <i class="fa-solid fa-circle"></i>
+            <a href="#">
             <h3>summer flaver_03</h3>
             <p>2021. 01. 05 - 2021. 03. 15</p>
-          </button>
+            </a>
+          </div>
+          <div>
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
           <div class="bg_shadow"></div>
         </li>
         <li data-img="content_04.png" data-title="summer flaver_04" data-narr="summer flaver_04:이미지 설명">
-          <i class="fa-solid fa-circle"></i>
-          <i class="fa-solid fa-circle-check"></i>
-          <button type="button">
+          <div>
+            <i class="fa-solid fa-circle"></i>
+            <a href="#">
             <h3>summer flaver_04</h3>
             <p>2020. 08. 05 - 2020. 09. 15</p>
-          </button>
+            </a>
+          </div>
+          <div>
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
           <div class="bg_shadow"></div>
         </li>
         <li data-img="content_05.png" data-title="summer flaver_05" data-narr="summer flaver_05:이미지 설명">
+          <div>
           <i class="fa-solid fa-circle"></i>
-          <i class="fa-solid fa-circle-check"></i>
-          <button type="button">
-            <h3>summer flaver_05</h3>
-            <p>2020. 03. 01 - 2020. 05. 15</p>
-          </button>
+          <a href="#">
+          <h3>summer flaver_05</h3>
+          <p>2020. 03. 01 - 2020. 05. 15</p>
+          </a>  
+        </div>
+          <div>
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
           <div class="bg_shadow"></div>
         </li>
         <li data-img="content_06.png" data-title="summer flaver_06" data-narr="summer flaver_06:이미지 설명">
+          <div>
           <i class="fa-solid fa-circle"></i>
-          <i class="fa-solid fa-circle-check"></i>
-          <button type="button">
+          <a href="#">
             <h3>summer flaver_06</h3>
             <p>2019. 08. 05 - 2019. 08. 15</p>
-          </button>
+          </a>
+          </div>
+          <div>
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
           <div class="bg_shadow"></div>
         </li>
       </ul>
@@ -129,13 +153,14 @@
     <div class="modal_window">
       <div class="modal_data">
         <div class="close_btn">
-          <button type="button"><i class="fa-solid fa-circle-xmark"></i></button>
+          <button type="button"><i class="fa-solid fa-circle-xmark"></i><span class="blind">닫기</span></button>
         </div> <!-- .close_btn -->
 
         <div class="modal_content">
-          <i class="fa-solid fa-circle"></i>
-          <h3>Lorem ipsum dolor sit amet, consectetur adipiscing</h3>
+          <div>
+          <h3><i class="fa-solid fa-circle"></i>Lorem ipsum dolor sit amet, consectetur adipiscing</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque cursus in pharetra egestas tellus tempor, bibendum aliquet. Pulvinar amet egestas eget est. Faucibus imperdiet elit, sit pellentesque pulvinar arcu dictum ipsum. Fringilla integer turpis feugiat eu sed orci dignissim tempor amet. Libero nec risus ipsum eget ut odio. Nunc ut aee ipsum.</p>
+          </div>
           <div class="img_content">
             <!-- 이곳에 이미지를 담을 예정 -->
           </div> <!-- .img_content -->
@@ -208,8 +233,12 @@
   </div> <!-- wrap -->
 
   <!-- javascript -->  
-  <script src="../js/common/jquery-3.6.0.min.js"></script>
-  <script src="../js/common/jquery-ui.min.js"></script>
-  <script src="../js/src/event.js"></script>
+  <script defer src="../js/common/jquery-3.6.0.min.js"></script>
+  <script defer src="../js/common/jquery-ui.min.js"></script>
+  <script defer src="../js/src/event.js"></script>
 </body>
 </html>
+
+<!-- 인라인요소, 블럭 요소는 서로 유사형 타입끼리 묶어서 사용 -->
+<!-- 인라인요소가 하나만 있어도 div로 묶어줘야 함 -->
+<!-- button 안에는 절대 h3과 p가 못들어간다. button 대신에 a 요소 사용 -->
