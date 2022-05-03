@@ -352,7 +352,7 @@ background-color: #aaa; }
 
   .best_card_list {
     --best-len : 6;
-    float:right; width:800px; height: 380px; 
+    float:right; width:800px; height: 380px; padding:50px 30px;
     /* background-color: #fdd; */
     overflow: hidden;
   }
