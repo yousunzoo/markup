@@ -7,7 +7,7 @@
 // 변수
 var modal = $('.modal_list');
 var modalLi = modal.find('li');
-var modalBtn = modalLi.children('button');
+var modalA = modalLi.find('a');
 
 var modalWindow = $('.modal_window');
 var modalClose = modalWindow.find('.close_btn');
@@ -15,13 +15,13 @@ var closeBtn = modalClose.children('button');
 
 var modalContent = modalWindow.find('.modal_content');
 var modalImg = modalContent.find('.img_content');
-var modalH = modalContent.children('h3');
-var modalP = modalContent.children('p');
+var modalH = modalContent.find('h3');
+var modalP = modalContent.find('p');
 
 var bigImgUrl = '../../img/event_page/'
 var timed = 500;
 var i = 0;
-var par, img, title, narr;
+var par, parP, img, title, narr;
 
 // 함수
 var imgUrlFn = function(data){
@@ -32,17 +32,18 @@ var imgUrlFn = function(data){
 // console.log(imgUrlFn('content_01.png'));
 
 // 이벤트
-modalBtn.on('click', function(e){
+modalA.on('click', function(e){
   e.preventDefault();
 
   // 이미지와 기능 가져오기
   par = $(this).parent();
-  img = par.attr('data-img');
-  title = par.attr('data-title');
-  narr = par.attr('data-narr');
+  parP = $(this).parents('li');
+  title = parP.attr('data-title');
+  narr = parP.attr('data-narr');
+  img = parP.attr('data-img');
 
   // 띄울 창의 내용에 내용 담기
-  modalH.text(title);
+  modalH.html('<i class="fa-solid fa-circle"></i>'+ title);
   modalP.text(narr);
   modalImg.css({'backgroundImage' : imgUrlFn(img)}); // 이미지 담기
 
