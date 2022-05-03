@@ -10,28 +10,16 @@ var originLiLen = horizontalLi.length;
 var i=0;
 var permission = true;
 
-var cloneL0 = horizontalLi.eq(-1).clone();
-horizontal.prepend(cloneL0);
-var cloneL1 = horizontalLi.eq(0).clone();
-horizontal.append(cloneL1);
-var cloneL2 = horizontalLi.eq(1).clone();
-horizontal.append(cloneL2);
-var cloneL3 = horizontalLi.eq(2).clone();
-horizontal.append(cloneL3);
-var cloneL4 = horizontalLi.eq(3).clone();
-horizontal.append(cloneL4);
-var cloneL5 = horizontalLi.eq(4).clone();
-horizontal.append(cloneL5);
-var cloneL6 = horizontalLi.eq(5).clone();
-horizontal.append(cloneL6);
-var cloneL7 = horizontalLi.eq(6).clone();
-horizontal.append(cloneL7);
-
+var cloneLi, j=0;
+for (; j < originLiLen ; j++ ){
+ var cloneLi = horizontalLi.eq(j).clone();
+ horizontal.append(cloneLi);
+}
 var newHorizontalLi = horizontal.children('li');
 var newLiLen = newHorizontalLi.length;
 var play;
 
-var slideGoFn= function(){
+var slideGoFn= function(e){
  play = setInterval(function(){
    horizontal.trigger('click');
  }, 1000);
@@ -47,12 +35,12 @@ horizontal.on('click', function(e){
 
   i += 1;
 
-  if(i>originLiLen){
-    horizontal.css({'marginLeft' : 0})
-    i=0;
-  };
-
-  horizontal.stop().animate({'marginLeft': -160 * i + 'px'});
+  horizontal.stop().animate({'marginLeft': -160 * i + 'px'}, 1000, 'easeInOutQuad', function(){
+    if(i >= originLiLen){
+      horizontal.css({'marginLeft' : 0})
+      i = 0;
+    };
+  });
 
 
 console.log;
@@ -61,3 +49,6 @@ console.log;
 slideGoFn();
 
 })(jQuery);
+
+// 요소 복제로 할 때 주의 사항 - 한바퀴를 돌 수 있도록 통으로 copy해야 함
+// setInterval 안에 함수 다 넣을 수 있도록 한번!
