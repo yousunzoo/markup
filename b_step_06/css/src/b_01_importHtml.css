@@ -1,0 +1,38 @@
+/* b_01_importHtml.css */
+
+.ex_wrap > div {
+  width: 100%; height: 18.75rem; margin-bottom: 1.875rem;
+  padding:0.5rem 2rem; box-sizing: border-box;
+}
+
+#box_01 {background-color: #4448AD;}
+#box_02 {background-color: #F82BFF77;}
+#box_03 {background-color: #491871;}
+
+h3 {
+  width: 80%; height: auto; margin:auto;  color:#fff;
+  font-size: 1.5rem; text-align: center;
+}
+
+.ex_wrap p {
+  width: 90%; margin:10px auto;
+}
+
+.btn,
+.link {
+  width: 100px; height: auto; margin-top:50px;
+  padding:0.3rem; border: 1px solid #fff; border-radius: 0.2rem;
+}
+
+.btn > button {
+  width: 100px; height: auto;
+  padding:0.3rem 2rem; color : #531; background-color: #fa0;
+}
+
+.link > a {
+  display: inline-block;
+  width: 100%; height: auto; 
+  box-sizing: border-box; padding: 0.5rem 1rem; 
+  font-size: 1.2rem; font-weight: 700; color : #171717; text-align:center;
+  background-color: #fff; 
+}
