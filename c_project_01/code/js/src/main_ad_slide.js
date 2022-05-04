@@ -14,26 +14,40 @@ jsonData.done(function(data){
   var slideData = data;
   var dataLen = slideData.length;
   var viewBox = $('#viewBox');
-  var slideType = 'horizontal_slide'
+  var slideType = 'position_slide';
+  var viewCover;
+  var setNum = 0;
+  var beforeN = setNum;
 
   // 기능구현1 -- 큰 틀이 되는 div 형성
   var slideWrapperSet = '<div class="slide"><div class="slide_wrapper"></div></div>';
   viewBox.html(slideWrapperSet);
   var slideWrapperCode = viewBox.find('.slide_wrapper');
   slideWrapperCode.addClass(slideType);
-  var slideDivSet = '<div class="view_cover"><div class="view_content"><h3></h3><p></p><div class="link"><a href="#"><span class="blind">해당 내용</span>바로가기</a></div><figure class="image"><figcaption class="blind"></figcaption></figure></div></div>';
+  var slideDivSet = '<div class="view_cover"><div class="view_con_wrapper"><div class="view_content"><h3></h3><p></p><div class="link"><a href="#"><span class="blind">해당 내용</span>바로가기<i class="fas fa-arrow-right"></i></a></div></div><figure class="image"><figcaption class="blind"></figcaption><p class="blind"></p></figure></div></div>';
 
   // 함수
+  var slideBtn = function(){
+    var insertBtn = '<div class="slide_btn blind_area"><button type="button" class="next"><span>다음 내용 보기</span><i class="fa-solid fa-chevron-right"></i></button><button type="button" class="prev"><span>이전 내용 보기</span><i class="fa-solid fa-chevron-left"></i></button></div>';
+    slideWrapperCode.before(insertBtn);
+  }; // slideBtn()
+
+
   var slideDivSetFn = function(n){
     slideWrapperCode.append(slideDivSet);
     // 변수
     var slideN = slideData[n];
     var imgUrl = '../img/main_slide/';
     var slideDiv = slideWrapperCode.children('div').eq(n); 
+
     var divTitle = slideDiv.find('h3');
-    var divContent = slideDiv.find('p');
+    var divContentWrapper = slideDiv.find('.view_content');
+    var divContent = divContentWrapper.find('p');
     var divLink = slideDiv.find('a');
     var divImg = slideDiv.find('.image');
+    var imgCaption = divImg.find('figcaption'); 
+    var imgContent = divImg.find('p');
+ 
 
     // 기능
     slideDiv.css({backgroundImage:'url('+imgUrl+slideN.background+')'});
@@ -42,17 +56,149 @@ jsonData.done(function(data){
     divContent.text(slideN.contents);
     divLink.attr({href:slideN.link});
     divImg.css({backgroundImage :'url('+imgUrl+slideN.image+')'});
-  }
+    imgCaption.text(slideN.description);
+    imgContent.text(slideN.summary);
+  }; // slideDivSetFn()
 
+  // 광고 내용 표시기능
+  var actionFn = function(i){
+    
+    console.log(beforeN, i);
+    viewCover = $('.view_cover');
+    // viewCover.eq(i).siblings().removeClass('action');
+    
+    // 기능 수정
+    // 선택된 순번 (setNum, i)의 요소를 나타나게 하고,
+    // 이후 action 처리된 요소를 사라지게 (fadeOut) 만든다음
+    // 나타난 요소에 action을 부여 (z-index)
+    if(i === beforeN){
+      viewCover.eq(i).addClass('action');
+    } else {
+      viewCover.eq(i).show();
+      viewCover.eq(beforeN).fadeOut(function(){
+        viewCover.eq(beforeN).removeClass('action');
+        viewCover.eq(i).addClass('action');
+        beforeN = i;
+      });
+      }
+    
+  } // actionFn();
+
+  
+
+  
   var i=0;
   for(; i<dataLen; i+=1){
     slideDivSetFn(i);
   }
 
+  actionFn(setNum);
+  slideBtn();
+  // ---------------------------------------------------------
+  // 인디케이터 생성
+  console.log(viewCover);
+  // 설명
+  /**
+   * 광고 갯수를 파악하여 인디케이터를 생성
+   * - 해당하는 순서에 맞는 인디케이터에 action 설정하여, 인지할 수 있도록(focus)
+   */
+  // 담을 코드 작성
+  var indiWrapper = '<div class="slide_check_part"><ul class="slide_indicator blind_area"></ul><p><em class="now_view"></em> / <span class="total_view"></span></p></div>';
+  var indiCode = '<li><a href="#" data-href="#"><span></span></a></li>'
+  
+  // 기능설정1 + 변수
+  slideWrapperCode.before(indiWrapper);
+  var slideCheckPart = viewBox.find('.slide_check_part');
+  var indiWrapperSelector = viewBox.find('.slide_indicator');
+  var viewLenCkNow = slideCheckPart.find('.now_view');
+  var viewLenCkTotal = slideCheckPart.find('.total_view');
+  var indiSelector;
+  
+  // 함수
+  var indicatorSetFn = function(n){
+    indiWrapperSelector.append(indiCode);
+    
+    indiSelector = indiWrapperSelector.find('li');
+
+    var indiLiLink = indiSelector.eq(n).find('a');
+    var indiLiSpan = indiSelector.eq(n).find('span');
+
+    indiLiLink.attr({'data-href' : '.' + slideData[n].description});
+    indiLiSpan.text(slideData[n].summary);
+  }; // indicatorSetFn()
+
+  var indicatorCheckFn = function(n){
+    viewLenCkNow.text(n+1);
+    viewLenCkTotal.text(dataLen);
+  } // indicatorCheckFn()
+
+  // indicator 생성
+  var j = 0;
+
+  for(; j < dataLen; j++){
+    indicatorSetFn(j);
+  }
+  indicatorCheckFn(setNum);
+  indiSelector.eq(setNum).addClass('action');
 
 
 
+// -----------------------------------------------------------
+// 실제 광고영역 동작처리
+// 설명
+/**
+ * = 다음/이전 버튼을 누르면 광고가 움직이게 해라
+ * = 인디케이터를 누르면 광고가 움직이게 해라
+ * = 마우스를 광고 위에 올리면 일시정지하고, 벗어나면 일정 시간마다 내용 변경 해라
+ */
 
+// 변수
+var nextBtn = viewBox.find('.next');
+var prevBtn = viewBox.find('.prev');
+
+// 함수
+// 인디케이터 표시
+var indiSetFn = function(n){
+  indiSelector.eq(n).addClass('action');
+  indiSelector.eq(n).siblings().removeClass('action');
+} // indiSetFn ()
+
+  // 슬라이드 광고, indicator, 체크번호 모두 동시에 처리되어야 하는 기능으로, 한번에 수행
+
+  var actionNumSetFn = function(n){
+    if(n >= dataLen){
+      n = 0;
+      setNum = n;
+    } else if (n < 0) {
+      n = dataLen -1 ;
+      setNum = n;
+    }
+
+    actionFn(n);
+    indicatorCheckFn(n);
+    indiSetFn(n);
+  } // actionNumSetFn(n);
+
+  
+// 이벤트
+nextBtn.on('click', function(e){
+e.preventDefault();
+setNum+=1;
+actionNumSetFn(setNum);
+}) // nextBtn.on('click')
+
+prevBtn.on('click', function(e){
+  e.preventDefault();
+  setNum -=1;
+  actionNumSetFn(setNum);
+})
+
+indiSelector.find('a').on('click', function(e){
+  e.preventDefault();
+  setNum = $(this).parent().index();
+  actionNumSetFn(setNum);
+})
+// $ajax -----------------------------------------------------
 });
 
  })(jQuery);
