@@ -13,7 +13,7 @@ jsonData.done(function(data){
   // 변수
   var slideData = data;
   var dataLen = slideData.length;
-  var viewBox = $('#viewBox');
+  var viewBox = $('.slide_set');
   var slideType = 'position_slide';
   var viewCover;
   var setNum = 0;

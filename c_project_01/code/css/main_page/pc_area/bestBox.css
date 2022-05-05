@@ -1,0 +1,12 @@
+@media screen and (min-width:90rem) {
+  /* 기준 디바이스 크기 : 90rem  */
+
+
+/* #bestBox 
+  ==========================================  */
+#bestBox { 
+  height: 43.75rem;
+  padding-top: 10.9375rem; padding-bottom: 9.0625rem;
+}
+
+}

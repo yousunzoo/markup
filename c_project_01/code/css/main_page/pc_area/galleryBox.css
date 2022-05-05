@@ -1,0 +1,11 @@
+@media screen and (min-width:90rem) {
+  /* 기준 디바이스 크기 : 90rem  */
+
+
+/* #galleryBox 
+  ==========================================  */
+#galleryBox {
+  height: 46.875rem; 
+  padding-top: 5rem; padding-bottom: 8.125rem;
+}
+}

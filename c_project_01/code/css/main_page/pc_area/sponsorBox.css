@@ -1,0 +1,9 @@
+@media screen and (min-width:90rem) {
+  /* 기준 디바이스 크기 : 90rem  */
+
+
+/* #sponsorBox 
+  ==========================================  */
+#sponsorBox { height: 6.25rem; }
+
+}

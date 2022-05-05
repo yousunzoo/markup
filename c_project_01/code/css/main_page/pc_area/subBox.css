@@ -1,0 +1,18 @@
+@media screen and (min-width:90rem) {
+  /* 기준 디바이스 크기 : 90rem  */
+
+
+/* #subBox 
+  ==========================================  */
+#subBox { height: 21.875rem; }
+
+.sub_area { right: 4.375rem; width: 25rem; }
+.sub_area_img {
+  float:left;
+  width: 28.75rem; height: 18.75rem;
+  transform:translateY(-1.5625rem);
+  background-image: url("../../../img/main_page_re/desktop/e_subBox/sub_img.png");
+  box-shadow:1.875rem 1.5625rem 0 #EFEFEF;
+}
+
+}
