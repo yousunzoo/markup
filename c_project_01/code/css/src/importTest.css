@@ -5,7 +5,7 @@ width: 100%; height: 62.5rem;
 background-color: #eee;
 }
 
-#viewBox {
+#slideBox {
 position:relative;
   width: 95%; height: 31.25vw; min-height: 37.5rem; max-height: 56.25rem;
 margin: auto;
@@ -18,7 +18,6 @@ margin: auto;
   position: absolute; top: 50%; left:0; z-index: 120;
   width: 100%; height: 0;
 }
-
 .slide_btn button {
   width: 60px; height: 40px;
   color:var(--white);
